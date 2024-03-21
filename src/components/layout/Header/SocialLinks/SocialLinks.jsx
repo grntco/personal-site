@@ -1,5 +1,5 @@
-import ghIcon from '../../../assets/icons/github-mark.svg'
-import xIcon from '../../../assets/icons/x-twitter.svg'
+import ghIcon from '../../../../assets/icons/github-mark.svg'
+import xIcon from '../../../../assets/icons/x-twitter.svg'
 import styles from './SocialLinks.module.css'
 
 function SocialLinks() {
@@ -11,7 +11,7 @@ function SocialLinks() {
         },
         { name: 'Twitter (x) logo', url: '#', icon: xIcon },
     ]
-
+    
     return (
         <ul className={styles.linksList}>
             {links.map((l, i) => {

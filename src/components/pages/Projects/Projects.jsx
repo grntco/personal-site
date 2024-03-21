@@ -1,4 +1,4 @@
-import Page from '../../Page/Page'
+import Page from '../../layout/Page/Page'
 
 function Projects() {
     return (

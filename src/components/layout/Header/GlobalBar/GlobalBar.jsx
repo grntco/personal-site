@@ -1,4 +1,4 @@
-import profileImg from '../../../assets/images/profile.jpeg'
+import profileImg from '../../../../assets/images/profile.jpeg'
 import Nav from '../Nav/Nav'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import styles from './GlobalBar.module.css'
