@@ -6,8 +6,8 @@ import styles from './GlobalBar.module.css'
 function GlobalBar() {
     //for now...
     const globalLinks = [
-        { name: 'grntco', url: '#' },
-        { name: 'Projects', url: '#' },
+        { name: 'grntco', url: '/' },
+        { name: 'Projects', url: '/projects' },
     ]
 
     return (

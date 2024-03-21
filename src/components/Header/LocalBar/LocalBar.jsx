@@ -4,9 +4,9 @@ import Nav from '../Nav/Nav'
 function LocalBar() {
     // for now...
     const localLinks = [
-        { name: 'About', url: '#' },
-        { name: 'Projects', url: '#' },
-        { name: 'Blog', url: '#' },
+        { name: 'About', url: '/about' },
+        { name: 'Projects', url: '/projects' },
+        { name: 'Blog', url: '/blog' },
     ]
 
     return (
