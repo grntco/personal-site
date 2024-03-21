@@ -18,7 +18,7 @@ function GlobalBar() {
                 alt='profile image'
                 className={styles.profileImg}
             />
-            <Nav links={globalLinks} position={'global'}></Nav>
+            <Nav links={globalLinks} global={true}></Nav>
             <ul className='social-links'>
                 <li className='social-link-item'>
                     <a
