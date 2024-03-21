@@ -1,0 +1,21 @@
+.header {
+    padding: 8px 48px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bar {
+    display: flex;
+}
+
+/* .header__bar .nav-links, */
+.header__bar .social-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+}

@@ -1,3 +1,5 @@
+@import url('satoshi.css');
+
 :root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -11,6 +13,8 @@
     --primary-txt-color: rgb(16, 15, 15);
     --secondary-txt-color: rgb(111, 110, 105);
     --tertiary-txt-color: rgb(183, 181, 172);
+    --font-family: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica',
+        'sans-serif';
 }
 
 * {
@@ -22,8 +26,16 @@
 body {
     background-color: var(--primary-bg-color);
     color: var(--primary-txt-color);
+    font-family: var(--font-family);
 }
 
 .icon {
-  height: 1.5rem;
+    height: 1.2rem;
+    filter: invert(3%) sepia(12%) saturate(326%) hue-rotate(314deg)
+    brightness(94%) contrast(93%);
+}
+
+.icon:hover {
+    filter: invert(44%) sepia(10%) saturate(179%) hue-rotate(13deg)
+        brightness(92%) contrast(85%);
 }

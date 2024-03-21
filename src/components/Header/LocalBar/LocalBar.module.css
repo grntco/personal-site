@@ -1,0 +1,3 @@
+.localBar {
+    composes: bar from '../Header.module.css'
+}

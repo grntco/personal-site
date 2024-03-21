@@ -1,0 +1,12 @@
+.globalBar {
+    composes: bar from '../Header.module.css';
+    margin-bottom: 8px;
+}
+
+.profileImg {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+

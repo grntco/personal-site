@@ -1,0 +1,42 @@
+.nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.linksList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--secondary-txt-color);
+    border: 1px solid var(--primary-bg-color);
+}
+
+.link:hover,
+.link:active {
+    background-color: var(--secondary-bg-color);
+    border-color: var(--border-color-active);
+    color: var(--primary-txt-color);
+}
+
+.globalLinkItem {
+    position: relative;
+}
+
+.globalLinkItem + .globalLinkItem::before {
+    content: '/';
+    color: var(--primary-txt-color);
+    position: absolute;
+    left: -7px;
+    top: 2px;
+}
