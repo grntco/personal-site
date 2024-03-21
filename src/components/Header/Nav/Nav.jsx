@@ -1,5 +1,6 @@
 import styles from './Nav.module.css'
 import PropTypes from 'prop-types'
+import { NavLink } from 'react-router-dom'
 
 function Nav({ links, global }) {
     return (
@@ -11,9 +12,9 @@ function Nav({ links, global }) {
                             key={i}
                             className={global ? styles.globalLinkItem : ''}
                         >
-                            <a href={l.url} className={styles.link}>
+                            <NavLink to={l.url} className={styles.link}>
                                 {l.name}
-                            </a>
+                            </NavLink>
                         </li>
                     )
                 })}
