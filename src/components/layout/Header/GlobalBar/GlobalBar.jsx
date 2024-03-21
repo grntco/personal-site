@@ -1,4 +1,5 @@
 import profileImg from '../../../../assets/images/profile.jpeg'
+import ToggleButton from '../../../ToggleButton/ToggleButton'
 import Nav from '../Nav/Nav'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import styles from './GlobalBar.module.css'
@@ -19,6 +20,7 @@ function GlobalBar() {
             />
             <Nav links={globalLinks} global={true} />
             <SocialLinks />
+            <ToggleButton />
         </div>
     )
 }
