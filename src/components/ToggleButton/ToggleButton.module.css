@@ -2,7 +2,7 @@
     background-color: var(--primary-bg-color);
     border: 1px solid var(--border-color);
     border-radius: 25px;
-    width: 48px;
+    width: 42px;
     height: 1.4rem;
     align-self: center; /* Take this out eventually*/
     position: relative;
@@ -27,11 +27,15 @@
     transform: translateY(-50%);
 }
 
+.button:hover .thumb {
+    background-color: var(--primary-txt-color);
+}
+
 /* maybe not needed */
 .button.toggled {
     background-color: var(--secondary-bg-color);
 }
 
 .button.toggled .thumb {
-    left: 28px;
+    left: calc(42px - 1rem - 4px);
 }
