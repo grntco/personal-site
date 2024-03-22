@@ -1,0 +1,28 @@
+.app {
+    min-height: 100vh;
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+}
+
+.lightTheme {
+    --primary-bg-color: rgb(255, 252, 240);
+    --secondary-bg-color: rgb(242, 240, 229);
+    --border-color: rgb(230, 228, 217);
+    --border-color-hover: rgb(218, 216, 206);
+    --border-color-active: rgb(206, 205, 195);
+    --primary-txt-color: rgb(16, 15, 15);
+    --secondary-txt-color: rgb(111, 110, 105);
+    --tertiary-txt-color: rgb(183, 181, 172);
+}
+
+.darkTheme {
+    --primary-bg-color: rgb(16, 15, 15);
+    --secondary-bg-color: rgb(28, 27, 26);
+    --border-color: rgb(40, 39, 38);
+    --border-color-hover: rgb(52, 51, 49);
+    --border-color-active: rgb(64, 62, 60);
+    --primary-txt-color: rgb(206, 205, 195);
+    --secondary-txt-color: rgb(135, 133, 128);
+    --tertiary-txt-color: rgb(87, 86, 83);
+}
