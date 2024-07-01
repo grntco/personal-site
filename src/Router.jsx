@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home/Home.jsx'
-import About from './pages/About/About.jsx'
-import Projects from './pages/Projects/Projects.jsx'
-import App from './App/App.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Projects from './pages/Projects.jsx'
+import App from './components/App/App.jsx'
 
 const siteNavigationMap = {
     home: {

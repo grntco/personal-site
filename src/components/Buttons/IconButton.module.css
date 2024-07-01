@@ -1,0 +1,35 @@
+.button {
+    /* This can probably compose from Button.module.css */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: none;
+    border: 1px solid var(--primary-bg-color);
+
+    /* just for icon */
+    padding: 4px 6px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-color: var(--border-color);
+}
+
+.button:hover {
+    background-color: var(--secondary-bg-color);
+    border-color: var(--border-color-active);
+}
+
+.icon {
+    height: 1.2rem;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(277%)
+        hue-rotate(13deg) brightness(95%) contrast(86%);
+}
+
+.button:hover > .icon {
+    filter: brightness(0) saturate(100%) invert(6%) sepia(7%) saturate(226%)
+        hue-rotate(314deg) brightness(102%) contrast(101%);
+}

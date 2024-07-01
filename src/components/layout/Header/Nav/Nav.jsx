@@ -12,7 +12,11 @@ function Nav({ links, global }) {
                             key={i}
                             className={global ? styles.globalLinkItem : ''}
                         >
-                            <NavLink to={l.url} className={styles.link}>
+                            <NavLink
+                                to={l.url}
+                                className={styles.link}
+                                title={l.name === '~' ? 'Go home' : ''}
+                            >
                                 {l.name}
                             </NavLink>
                         </li>

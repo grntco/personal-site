@@ -1,7 +1,7 @@
-import Router from '../Router.jsx'
+import Router from '../../Router.jsx'
 import { createContext, useContext, useState } from 'react'
 import styles from './App.module.css'
-import { ThemeContext } from '../ThemeContext.jsx'
+import { ThemeContext } from '../../ThemeContext.jsx'
 
 function App() {
     const [theme, setTheme] = useState('light')

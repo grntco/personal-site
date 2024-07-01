@@ -1,7 +1,8 @@
 import Header from '../Header/Header'
 import PropTypes from 'prop-types'
+import styles from './Page.module.css'
 
-function Page({ children }) {
+export default function Page({ children }) {
     return (
         <>
             <Header />
@@ -13,5 +14,3 @@ function Page({ children }) {
 Page.propTypes = {
     children: PropTypes.element,
 }
-
-export default Page
