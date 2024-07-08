@@ -1,4 +1,16 @@
-.section {
-
+.section:first-child {
+    padding: 4rem 0;
 }
 
+.section + .section {
+    padding-bottom: 4rem;
+}
+
+.section + .section .row {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.section p + p {
+    margin-top: 2rem;
+}

@@ -1,6 +1,7 @@
 .app {
     min-height: 100vh;
     font-family: var(--font-family);
+    /* font-size: px; */
     background-color: var(--primary-bg-color);
     color: var(--primary-txt-color);
 }
