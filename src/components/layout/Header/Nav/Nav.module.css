@@ -37,6 +37,7 @@
     right: 0;
     bottom: -8px;
     background-color: var(--border-color-active);
+    background-color: #da702c;
     border-radius: 2px;
     height: 2px;
 }
