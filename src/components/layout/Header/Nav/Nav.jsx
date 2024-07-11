@@ -14,7 +14,9 @@ function Nav({ links, global }) {
                         >
                             <NavLink
                                 to={l.url}
-                                className={styles.link}
+                                className={({ isActive }) =>
+                                    `${styles.link} ${isActive ? styles.active : ''}`
+                                }
                                 title={l.name === '~' ? 'Go home' : ''}
                             >
                                 {l.name}
