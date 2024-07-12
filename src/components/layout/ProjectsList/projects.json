@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Resume Builder",
+        "exerpt": "A resume/CV creator built for The Odin Project's React course.",
+        "path": "/resume-builder",
+        "links": {
+            "repo": "https://github.com/grntco/resume-builder",
+            "demo": "https://resume-builder-lac.vercel.app/"
+        },
+        "meta": {
+            "year": "2024"
+        },
+        "content": ""
+    },
+    {
+        "id": 2,
+        "name": "Battleship",
+        "exerpt": "A battleship game for practice with unit testing for The Odin Project's JavaScript course.",
+        "path": "/battleship",
+        "links": {
+            "repo": "https://github.com/grntco/battleship",
+            "demo": "https://grntco.github.io/battleship/"
+        },
+        "meta": {
+            "year": "2023"
+        },
+        "content": ""
+    },
+    {
+        "id": 3,
+        "name": "To-Do",
+        "exerpt": "A to-do app created for The Odin Project's JavaScript course.",
+        "path": "/to-do",
+        "links": {
+            "repo": "https://github.com/grntco/to-do",
+            "demo": "https://grntco.github.io/to-do/"
+        },
+        "meta": {
+            "year": "2023"
+        },
+        "content": ""
+    }
+]

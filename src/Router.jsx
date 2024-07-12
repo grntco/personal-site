@@ -22,6 +22,10 @@ const siteNavigationMap = {
                         name: 'Reading',
                         path: '/reading',
                     },
+                    {
+                        name: 'Colophon',
+                        path: '/colophon',
+                    },
                 ],
             },
             {
@@ -30,11 +34,11 @@ const siteNavigationMap = {
                 children: [
                     {
                         name: 'Personal',
-                        path: '/personal-projects',
+                        path: '/personal',
                     },
                     {
                         name: 'Professional',
-                        path: '/professional-projects',
+                        path: '/professional',
                     },
                 ],
             },
