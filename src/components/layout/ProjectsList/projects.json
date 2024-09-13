@@ -11,7 +11,7 @@
         "meta": {
             "year": "2024"
         },
-        "content": ""
+        "content": "A resume/CV creator built for The Odin Project's React course."
     },
     {
         "id": 2,
@@ -25,7 +25,7 @@
         "meta": {
             "year": "2023"
         },
-        "content": ""
+        "content": "A battleship game for practice with unit testing for The Odin Project's JavaScript course."
     },
     {
         "id": 3,
@@ -39,6 +39,6 @@
         "meta": {
             "year": "2023"
         },
-        "content": ""
+        "content": "A to-do app created for The Odin Project's JavaScript course."
     }
 ]
