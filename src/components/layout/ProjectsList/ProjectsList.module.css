@@ -6,14 +6,11 @@
 .panel {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    /* gap: 8px; */
     padding: 12px 0px;
 }
 
 .panel:not(:last-child) {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -27,22 +24,38 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.active {
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* should probably add these to index.css as generic lists? */
-.content ul,
-.content ol {
+.text ul,
+.text ol {
     margin-left: 48px;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.content ul {
+.text ul {
     list-style-type: disc;
 }
 
 .btnsContainer {
+    margin-top: 4px;
     display: flex;
     gap: 8px;
 }
@@ -55,7 +68,7 @@
 
 .icon {
     composes: icon from '../../Buttons/IconButton.module.css';
-    transition: transform 0.3s ease-out;
+    transition: transform 0.5s ease-out;
 }
 
 .icon.active {

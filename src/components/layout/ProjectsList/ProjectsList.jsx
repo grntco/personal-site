@@ -12,7 +12,7 @@ export default function ProjectsList() {
     useEffect(() => {
         setTimeout(() => {
             setActiveIndex(0)
-        }, 500)
+        }, 1000)
     }, [])
 
     return (
@@ -38,28 +38,21 @@ export default function ProjectsList() {
                                 />
                             </button>
                         </div>
-                        {isActive && (
-                            <Fragment>
-                                <div className={styles.btnsContainer}>
-                                    <LinkButton
-                                        url={project.links.demo}
-                                        external
-                                    >
-                                        Demo
-                                    </LinkButton>
-                                    <LinkButton
-                                        url={project.links.repo}
-                                        external
-                                    >
-                                        Repo
-                                    </LinkButton>
-                                </div>
-                                <div className={styles.content}>
-                                    {/* <div>{project.meta.year}</div> */}
-                                    <Markdown>{project.content}</Markdown>
-                                </div>
-                            </Fragment>
-                        )}
+                        <div
+                            className={`${styles.content} ${isActive && styles.active}`}
+                        >
+                            <div className={styles.btnsContainer}>
+                                <LinkButton url={project.links.demo} external>
+                                    Demo
+                                </LinkButton>
+                                <LinkButton url={project.links.repo} external>
+                                    Repo
+                                </LinkButton>
+                            </div>
+                            <div className={styles.text}>
+                                <Markdown>{project.content}</Markdown>
+                            </div>
+                        </div>
                     </li>
                 )
             })}
