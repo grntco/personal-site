@@ -1,51 +1,63 @@
 .accordian {
     list-style-type: none;
+    padding: 0px 12px;
 }
 
 .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     padding: 12px 0px;
 }
 
 .panel:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     border-bottom: 1px solid var(--border-color);
 }
 
-.panelHeader {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.panelContent {
+.content {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.listItem + .listItem::before {
-    /* border-top: 1px solid var(--border-color); */
-    /* content: '';
-    background-color: var(--border-color);
-    top: -6px;
-    left: 0;
-    right: 0;
-    height: 1px;
-
-    position: absolute; */
+/* should probably add these to index.css as generic lists? */
+.content ul,
+.content ol {
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.listItem:hover {
-    /* background-color: var(--secondary-bg-color); */
+.content ul {
+    list-style-type: disc;
 }
 
-.year,
-.info p {
-    /* color: var(--secondary-txt-color); */
+.btnsContainer {
+    display: flex;
+    gap: 8px;
 }
 
-.info {
-    /* flex-grow: 1; */
+.toggleBtn {
+    /* eventually all button styles should be in Buttons.module.css, then every component composes from there? */
+    composes: button from '../../Buttons/IconButton.module.css';
+    /* border: 1px solid red; */
 }
 
-.buttonsContainer {
+.icon {
+    composes: icon from '../../Buttons/IconButton.module.css';
+    transition: transform 0.3s ease-out;
+}
+
+.icon.active {
+    transform: rotate(180deg);
 }

@@ -1,34 +1,46 @@
 import LinkButton from '../../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
 import projects from './projects.json'
-import { useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import IconButton from '../../Buttons/IconButton'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
+import Markdown from 'react-markdown'
 
 export default function ProjectsList() {
     const [activeIndex, setActiveIndex] = useState(-1)
 
+    useEffect(() => {
+        setTimeout(() => {
+            setActiveIndex(0)
+        }, 500)
+    }, [])
+
     return (
         <ul className={styles.accordian}>
             {projects.map((project, index) => {
+                const isActive = activeIndex === index
                 return (
                     <li className={styles.panel} key={index}>
-                        <div className={styles.panelHeader}>
-                            <h3>{project.name}</h3>
-                            <IconButton
-                                src={ChevronIcon}
-                                handleOnClick={() =>
-                                    activeIndex === index
+                        <div className={styles.header}>
+                            <h2>{project.name}</h2>
+                            <button
+                                onClick={() =>
+                                    isActive
                                         ? setActiveIndex(-1)
                                         : setActiveIndex(index)
                                 }
-                            />
+                                className={styles.toggleBtn}
+                            >
+                                <img
+                                    src={ChevronIcon}
+                                    alt='chevron icon button'
+                                    className={`${styles.icon} ${isActive && styles.active}`}
+                                />
+                            </button>
                         </div>
-                        {activeIndex === index && (
-                            <div className={styles.panelContent}>
-                                <div>{project.meta.year}</div>
-                                <p>{project.content}</p>
-                                <div className={styles.buttonsContainer}>
+                        {isActive && (
+                            <Fragment>
+                                <div className={styles.btnsContainer}>
                                     <LinkButton
                                         url={project.links.demo}
                                         external
@@ -42,7 +54,11 @@ export default function ProjectsList() {
                                         Repo
                                     </LinkButton>
                                 </div>
-                            </div>
+                                <div className={styles.content}>
+                                    {/* <div>{project.meta.year}</div> */}
+                                    <Markdown>{project.content}</Markdown>
+                                </div>
+                            </Fragment>
                         )}
                     </li>
                 )

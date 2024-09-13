@@ -24,7 +24,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     letter-spacing: 0.05rem;
     font-weight: 600;
 }
@@ -40,6 +41,18 @@ h2 {
 h3 {
     font-size: 1.1rem;
 }
+
+h4 {
+    font-size: 1rem;
+}
+
+a {
+    color: rgb(58, 169, 159);
+}
+
+/* a:visited {
+    color: rgb(139, 126, 200);
+} */
 
 /* body {
     font-size: 20px;
