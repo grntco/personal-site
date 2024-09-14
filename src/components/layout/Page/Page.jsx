@@ -1,6 +1,5 @@
 import Header from '../Header/Header'
 import PropTypes from 'prop-types'
-import styles from './Page.module.css'
 
 export default function Page({ children }) {
     return (

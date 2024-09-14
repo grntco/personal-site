@@ -1,7 +1,7 @@
 import styles from './Header.module.css'
 import GlobalBar from './GlobalBar/GlobalBar'
 import LocalBar from './LocalBar/LocalBar'
-import Container from '../Container/Container'
+import Container from '../Page/Container'
 
 function Header() {
     return (

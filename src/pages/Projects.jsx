@@ -12,9 +12,9 @@ function Projects() {
             <Section>
                 <h1>Projects</h1>
                 <p>Hello from Projects! Here are a list of projects created.</p>
-                <div>
-                    <ProjectsList />
-                </div>
+            </Section>
+            <Section>
+                <ProjectsList />
             </Section>
         </Page>
     )

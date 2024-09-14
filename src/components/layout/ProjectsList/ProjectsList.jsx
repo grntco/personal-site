@@ -15,20 +15,23 @@ export default function ProjectsList() {
         }, 1000)
     }, [])
 
+    function toggleActive(isActive, index) {
+        isActive ? setActiveIndex(-1) : setActiveIndex(index)
+    }
+
     return (
         <ul className={styles.accordian}>
             {projects.map((project, index) => {
                 const isActive = activeIndex === index
                 return (
                     <li className={styles.panel} key={index}>
-                        <div className={styles.header}>
+                        <div
+                            className={styles.header}
+                            onClick={() => toggleActive(isActive, index)}
+                        >
                             <h2>{project.name}</h2>
                             <button
-                                onClick={() =>
-                                    isActive
-                                        ? setActiveIndex(-1)
-                                        : setActiveIndex(index)
-                                }
+                                onClick={() => toggleActive(isActive, index)}
                                 className={styles.toggleBtn}
                             >
                                 <img
