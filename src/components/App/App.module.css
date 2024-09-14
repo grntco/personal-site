@@ -6,7 +6,7 @@
     color: var(--primary-txt-color);
 }
 
-.lightTheme {
+.lightMode {
     --primary-bg-color: rgb(255, 252, 240);
     --secondary-bg-color: rgb(242, 240, 229);
     --border-color: rgb(230, 228, 217);
@@ -17,7 +17,7 @@
     --tertiary-txt-color: rgb(183, 181, 172);
 }
 
-.darkTheme {
+.darkMode {
     --primary-bg-color: rgb(16, 15, 15);
     --secondary-bg-color: rgb(28, 27, 26);
     --border-color: rgb(40, 39, 38);

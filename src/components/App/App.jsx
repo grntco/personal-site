@@ -1,18 +1,21 @@
 import Router from '../../Router.jsx'
-import { createContext, useContext, useState } from 'react'
+import { createContext, useState } from 'react'
 import styles from './App.module.css'
-import { ThemeContext } from '../../ThemeContext.jsx'
+// import { ThemeContext } from '../../ThemeContext.jsx'
+
+export const ThemeContext = createContext()
 
 function App() {
-    const [theme, setTheme] = useState('light')
-    // const theme = useContext(ThemeContext)
-    const className = theme + 'Theme'
+    const [isDarkMode, setIsDarkMode] = useState(false)
+
+    function toggleTheme() {
+        setIsDarkMode((prevDarkMode) => !prevDarkMode)
+    }
 
     return (
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
             <div
-                className={`${styles.app} ${styles[`${className}`]}`}
-                // toggleTheme={toggleTheme}
+                className={`${styles.app} ${isDarkMode ? styles.darkMode : styles.lightMode}`}
             >
                 <Router />
             </div>

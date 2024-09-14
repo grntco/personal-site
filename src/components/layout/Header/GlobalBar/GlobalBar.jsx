@@ -6,9 +6,14 @@ import styles from './GlobalBar.module.css'
 import HamburgerIcon from '../../../../assets/icons/hamburger.svg'
 import Button from '../../../Buttons/Button'
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+// import ThemeContext from '../../../../ThemeContext'
+import { ThemeContext } from '../../../App/App'
 
 function GlobalBar() {
     //for now...
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext)
+
     const globalLinks = [
         { name: '~', url: '/' },
         { name: 'Projects', url: '/projects' },
@@ -29,7 +34,7 @@ function GlobalBar() {
             </NavLink>
             <Nav links={globalLinks} global={true} />
             <SocialLinks />
-            <ToggleButton />
+            <ToggleButton handleOnClick={() => toggleTheme()} />
         </div>
     )
 }

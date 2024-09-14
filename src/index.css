@@ -55,6 +55,10 @@ a:hover {
     color: var(--primary-txt-color);
 }
 
+p {
+    /* font-size: 1.2rem; */
+}
+
 /* a:visited {
     color: rgb(139, 126, 200);
 } */
