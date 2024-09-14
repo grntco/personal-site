@@ -1,8 +1,8 @@
 import LinkButton from '../../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
 import projects from './projects.json'
-import { Fragment, useState, useEffect } from 'react'
-import IconButton from '../../Buttons/IconButton'
+import { useState, useEffect } from 'react'
+import Button from '../../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
 import Markdown from 'react-markdown'
 
@@ -30,16 +30,17 @@ export default function ProjectsList() {
                             onClick={() => toggleActive(isActive, index)}
                         >
                             <h2>{project.name}</h2>
-                            <button
+                            <Button
                                 onClick={() => toggleActive(isActive, index)}
                                 className={styles.toggleBtn}
+                                type='icon'
                             >
                                 <img
                                     src={ChevronIcon}
                                     alt='chevron icon button'
                                     className={`${styles.icon} ${isActive && styles.active}`}
                                 />
-                            </button>
+                            </Button>
                         </div>
                         <div
                             className={`${styles.content} ${isActive && styles.active}`}

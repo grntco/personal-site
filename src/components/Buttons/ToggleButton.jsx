@@ -1,4 +1,4 @@
-import styles from './ToggleButton.module.css'
+import styles from './Button.module.css'
 import { useState } from 'react'
 
 function ToggleButton() {
@@ -6,7 +6,7 @@ function ToggleButton() {
 
     return (
         <button
-            className={`${styles.button} ${toggled ? styles.toggled : ''}`}
+            className={`${styles.toggleButton} ${toggled ? styles.toggled : ''}`}
             onClick={() => setToggled(!toggled)}
         >
             <div className={styles.thumb} />

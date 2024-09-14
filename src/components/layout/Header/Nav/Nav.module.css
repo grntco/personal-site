@@ -12,14 +12,7 @@
 }
 
 .link {
-    /* This can probably compose from Button.module.css */
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    color: var(--secondary-txt-color);
+    composes: linkButton from '../../../Buttons/Button.module.css';
     border: 1px solid var(--primary-bg-color);
     position: relative;
 }

@@ -1,11 +1,42 @@
-.linkButton {
-    /* This can probably compose from Button.module.css */
+.button {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
     padding: 4px 8px;
     border-radius: 4px;
+    background: none;
+    border: 1px solid var(--primary-bg-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--secondary-bg-color);
+    border-color: var(--border-color-active);
+}
+
+.iconButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 6px;
+    border-color: var(--border-color);
+}
+
+.iconButton img {
+    height: 1.2rem;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(277%)
+        hue-rotate(13deg) brightness(95%) contrast(86%);
+}
+
+.iconButton:hover > img {
+    filter: brightness(0) saturate(100%) invert(6%) sepia(7%) saturate(226%)
+        hue-rotate(314deg) brightness(102%) contrast(101%);
+}
+
+/* unsure of all this below */
+.linkButton {
+    composes: button;
     color: var(--secondary-txt-color);
     border: 1px solid var(--border-color);
     position: relative;
@@ -21,4 +52,47 @@
     background-color: var(--secondary-bg-color);
     border-color: var(--border-color-active);
     color: rgb(218, 112, 44);
+}
+
+/* toggleButton */
+.toggleButton {
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    width: 42px;
+    height: 1.4rem;
+    align-self: center; /* Take this out eventually*/
+    position: relative;
+}
+
+.toggleButton:hover {
+    background-color: var(--secondary-bg-color);
+    border-color: var(--border-color-active);
+    cursor: pointer;
+}
+
+.thumb {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: var(--secondary-txt-color);
+    transform: translateX(0);
+    transition: left 0.15s ease;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggleButton:hover .thumb {
+    background-color: var(--primary-txt-color);
+}
+
+/* maybe not needed */
+.toggleButton.toggled {
+    background-color: var(--secondary-bg-color);
+}
+
+.toggleButton.toggled .thumb {
+    left: calc(42px - 1rem - 4px);
 }
