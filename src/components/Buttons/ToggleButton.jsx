@@ -2,14 +2,14 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import { useState } from 'react'
 
-function ToggleButton({ handleOnClick }) {
-    const [toggled, setToggled] = useState(false)
+function ToggleButton({ toggled, handleOnClick }) {
+    const [isToggled, setToggled] = useState(toggled)
 
     return (
         <button
-            className={`${styles.toggleButton} ${toggled ? styles.toggled : ''}`}
+            className={`${styles.toggleButton} ${isToggled ? styles.toggled : ''}`}
             onClick={() => {
-                setToggled(!toggled)
+                setToggled(!isToggled)
                 handleOnClick()
             }}
         >
@@ -19,6 +19,7 @@ function ToggleButton({ handleOnClick }) {
 }
 
 ToggleButton.propTypes = {
+    toggled: PropTypes.bool,
     handleOnClick: PropTypes.func,
 }
 

@@ -6,7 +6,8 @@ import styles from './App.module.css'
 export const ThemeContext = createContext()
 
 function App() {
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
+    const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode.matches)
 
     function toggleTheme() {
         setIsDarkMode((prevDarkMode) => !prevDarkMode)

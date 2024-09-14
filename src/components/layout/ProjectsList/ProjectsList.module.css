@@ -65,12 +65,12 @@
 
 .toggleBtn {
     /* eventually all button styles should be in Buttons.module.css, then every component composes from there? */
-    composes: button from '../../Buttons/IconButton.module.css';
+    /* composes: button from '../../Buttons/Button.module.css'; */
     /* border: 1px solid red; */
 }
 
 .icon {
-    composes: icon from '../../Buttons/Button.module.css';
+    /* composes: icon from '../../Buttons/Button.module.css'; */
     transition: transform 0.5s ease-out;
 }
 

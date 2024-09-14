@@ -34,7 +34,10 @@ function GlobalBar() {
             </NavLink>
             <Nav links={globalLinks} global={true} />
             <SocialLinks />
-            <ToggleButton handleOnClick={() => toggleTheme()} />
+            <ToggleButton
+                toggled={isDarkMode}
+                handleOnClick={() => toggleTheme()}
+            />
         </div>
     )
 }
