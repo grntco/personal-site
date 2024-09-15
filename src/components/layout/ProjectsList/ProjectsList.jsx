@@ -1,13 +1,15 @@
 import LinkButton from '../../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
 import projects from './projects.json'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Button from '../../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
 import Markdown from 'react-markdown'
+import { ThemeContext } from '../../App/App'
 
 export default function ProjectsList() {
     const [activeIndex, setActiveIndex] = useState(-1)
+    const { isDarkMode } = useContext(ThemeContext)
 
     useEffect(() => {
         setTimeout(() => {
@@ -34,6 +36,7 @@ export default function ProjectsList() {
                                 onClick={() => toggleActive(isActive, index)}
                                 className={styles.toggleBtn}
                                 type='icon'
+                                isDarkMode={isDarkMode}
                             >
                                 <img
                                     src={ChevronIcon}

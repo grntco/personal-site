@@ -1,18 +1,19 @@
 .button {
-    text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
     padding: 4px 8px;
     border-radius: 4px;
     background: none;
-    border: 1px solid var(--primary-bg-color);
+    border: 1px solid var(--border-color);;
     cursor: pointer;
+    color: var(--secondary-txt-color);
 }
 
 .button:hover {
     background-color: var(--secondary-bg-color);
     border-color: var(--border-color-active);
+    color: var(--primary-txt-color);
 }
 
 .iconButton {
@@ -20,7 +21,7 @@
     justify-content: center;
     align-items: center;
     padding: 4px 6px;
-    border-color: var(--border-color);
+
 }
 
 .iconButton img {
@@ -34,25 +35,33 @@
         hue-rotate(314deg) brightness(102%) contrast(101%);
 }
 
+.iconButton.darkMode img {
+    filter: invert(44%) sepia(5%) saturate(325%) hue-rotate(13deg)
+        brightness(95%) contrast(89%);
+}
+
+.iconButton.darkMode:hover > img {
+    filter: invert(96%) sepia(6%) saturate(295%) hue-rotate(16deg)
+        brightness(87%) contrast(88%);
+}
+
 /* unsure of all this below */
 .linkButton {
     composes: button;
-    color: var(--secondary-txt-color);
-    border: 1px solid var(--border-color);
+    text-decoration: none;
     position: relative;
 }
 
 .linkButton:hover {
     background-color: var(--secondary-bg-color);
     border-color: var(--border-color-active);
-    color: var(--primary-txt-color);
 }
 
-.active:hover {
+/* .active:hover {
     background-color: var(--secondary-bg-color);
     border-color: var(--border-color-active);
     color: rgb(218, 112, 44);
-}
+} */
 
 /* toggleButton */
 .toggleButton {

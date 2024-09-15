@@ -21,7 +21,7 @@ function GlobalBar() {
 
     return (
         <div className={styles.globalBar}>
-            <Button type='icon'>
+            <Button type='icon' isDarkMode={isDarkMode}>
                 <img src={HamburgerIcon} alt='hamburger menu icon' />
             </Button>
             {/* <img
