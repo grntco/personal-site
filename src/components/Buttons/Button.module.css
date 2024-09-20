@@ -20,12 +20,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4px 6px;
-
+    padding: 4px 5px;
 }
 
 .iconButton img {
-    height: 1.2rem;
+    height: 1.3rem;
     filter: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(277%)
         hue-rotate(13deg) brightness(95%) contrast(86%);
 }

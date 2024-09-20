@@ -4,6 +4,7 @@ import Nav from '../Nav/Nav'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import styles from './GlobalBar.module.css'
 import HamburgerIcon from '../../../../assets/icons/hamburger.svg'
+import SettingsIcon from '../../../../assets/icons/settings.svg'
 import Button from '../../../Buttons/Button'
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
@@ -22,7 +23,7 @@ function GlobalBar() {
     return (
         <div className={styles.globalBar}>
             <Button type='icon' isDarkMode={isDarkMode}>
-                <img src={HamburgerIcon} alt='hamburger menu icon' />
+                <img src={HamburgerIcon} alt='menu' />
             </Button>
             {/* <img
                 src={profileImg}
@@ -38,6 +39,9 @@ function GlobalBar() {
                 toggled={isDarkMode}
                 handleOnClick={() => toggleTheme()}
             />
+            <Button type='icon' isDarkMode={isDarkMode} onHover={() => this.img }>
+                <img src={SettingsIcon} alt='settings' />
+            </Button>
         </div>
     )
 }

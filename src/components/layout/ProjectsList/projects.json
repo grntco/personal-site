@@ -4,6 +4,7 @@
         "name": "Resume Builder",
         "exerpt": "A resume/CV creator built for The Odin Project's React course.",
         "path": "/resume-builder",
+        "image": "src/assets/images/resume-builder.jpeg",
         "links": {
             "repo": "https://github.com/grntco/resume-builder",
             "demo": "https://resume-builder-lac.vercel.app/"

@@ -48,6 +48,14 @@ export default function ProjectsList() {
                         <div
                             className={`${styles.content} ${isActive && styles.active}`}
                         >
+                            {project.image && (
+                                <div className={styles.imageWrapper}>
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                    />
+                                </div>
+                            )}
                             <div className={styles.btnsContainer}>
                                 <LinkButton url={project.links.demo} external>
                                     Demo

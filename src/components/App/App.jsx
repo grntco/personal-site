@@ -7,7 +7,8 @@ export const ThemeContext = createContext()
 
 function App() {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
-    const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode.matches)
+    // const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode.matches)
+    const [isDarkMode, setIsDarkMode] = useState(false)
 
     function toggleTheme() {
         setIsDarkMode((prevDarkMode) => !prevDarkMode)

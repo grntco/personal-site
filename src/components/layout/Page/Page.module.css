@@ -20,11 +20,16 @@
 }
 
 .section p + p {
-    /* margin-top: 1.8rem; */
+    margin-top: 1.8rem;
 }
 
 .container {
     /* padding: 48px 96px; */
     margin: 0 auto;
     max-width: 64rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
