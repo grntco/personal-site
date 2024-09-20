@@ -4,6 +4,7 @@ import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import App from './components/App/App.jsx'
 import Blog from './pages/Blog.jsx'
+import Post from './pages/Post.jsx'
 
 const siteNavigationMap = {
     home: {
@@ -81,6 +82,10 @@ function Router() {
         {
             path: 'blog',
             element: <Blog />,
+        },
+        {
+            path: '/blog/:path',
+            element: <Post />,
         },
     ])
     return <RouterProvider router={router} />

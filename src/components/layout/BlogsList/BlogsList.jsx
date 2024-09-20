@@ -30,7 +30,11 @@ function BlogsList() {
                 if (currentBlogYear === previousBlogYear) {
                     return (
                         <li key={index} className={styles.listItem}>
-                            <Link to={blog.path} className={styles.link}>
+                            <Link
+                                to={blog.path}
+                                className={styles.link}
+                  
+                            >
                                 <span className={styles.date}>
                                     {format(new Date(blog.date), 'LL-dd')}
                                 </span>
@@ -46,7 +50,11 @@ function BlogsList() {
                                 <h2>{currentBlogYear}</h2>
                             </li>
                             <li key={index} className={styles.listItem}>
-                                <Link to={blog.path} className={styles.link}>
+                                <Link
+                                    to={blog.path}
+                                    className={styles.link}
+                               
+                                >
                                     <span className={styles.date}>
                                         {format(new Date(blog.date), 'LL-dd')}
                                     </span>
