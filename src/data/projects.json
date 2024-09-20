@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "name": "To-Do",
+        "exerpt": "A to-do app created for The Odin Project's JavaScript course.",
+        "path": "/to-do",
+        "links": {
+            "repo": "https://github.com/grntco/to-do",
+            "demo": "https://grntco.github.io/to-do/"
+        },
+        "meta": {
+            "year": "2023"
+        },
+        "content": "This is a project for The Odin Project's JavaScript course to create [a to-do list web application](https://www.theodinproject.com/lessons/node-path-javascript-todo-list).\nI used HTML, CSS, and Vanilla JS.\nI learned and implmented tools and concepts such as Webpack, localStorage, JS modules and classes, and the principles of OOP. "
+    },
+    {
+        "id": 2,
+        "name": "Battleship",
+        "exerpt": "A battleship game for practice with unit testing for The Odin Project's JavaScript course.",
+        "path": "/battleship",
+        "links": {
+            "repo": "https://github.com/grntco/battleship",
+            "demo": "https://grntco.github.io/battleship/"
+        },
+        "meta": {
+            "year": "2023"
+        },
+        "content": "This is a project for The Odin Project's (TOP) JavaScript course to create [a battleship game](https://www.theodinproject.com/lessons/node-path-javascript-battleship) to practice unit testing.\nI used JavaScript, HTML, CSS, and Jest.\nThis is the first major project on which I implemented unit testing. I learned which methods to test, how to use mocking, and how to organize my tests with test suites.\nTesting aside, I also practiced much of what I learned throughout TOP's JavaScript course in this final project, including building the project with webpack and JS modules.\n### How to Play\n1. Setup your board by placing your battleships on it. Drag your ship over the board and click on any cell to place it down. You can choose to keep a ship horizontal or rotate it before you place it, or choose to generate a random ship on the board instead.\n2. Once you have placed your six ships on your board, you can begin playing! To make attack the enemy, click any cell on their board. As you attack, the enemy will simultaneously attack your board and attempt to hit your ships. Misses are shown in white and hits are shown in a blinking red.\n3. To win the game, sink all the enemy ships before they sink yours! To sink an enemy ship, you must hit all the cells that contain that ship.\n### Credits\n* [Terminal Colors](https://chrisyeh96.github.io/2020/03/28/terminal-colors.html) from Chris Yeh\n* [JetBrains Mono](https://www.fontshare.com/fonts/jet-brains-mono) from Fontshare"
+    },
+
+    {
+        "id": 3,
+        "name": "Resume Builder",
+        "exerpt": "A resume/CV creator built for The Odin Project's React course.",
+        "path": "/resume-builder",
+        "image": "src/assets/images/resume-builder.jpeg",
+        "links": {
+            "repo": "https://github.com/grntco/resume-builder",
+            "demo": "https://resume-builder-lac.vercel.app/"
+        },
+        "meta": {
+            "year": "2024"
+        },
+        "content": "This is a project for The Odin Project's React course [to create a resume/CV creator](https://www.theodinproject.com/lessons/node-path-react-new-cv-application) using React.\nThis is the first website I built with React. I learned to work with reusable components, lists, and state. I also used Vite, CSS modules, Vercel for hosting, and jsPDF, a library for converting HTML to PDF documents.\n### Features\n* Input your info into the form cards and watch it automatically populate onto the resume document in real-time.\n* If needed, you can add/delete work and education experiences—as well as add/delete responsibilities within each experience—up to specified limits.\n* When finished, download your new resume using the button on the top right corner.\n\n### Credits\n* [jsPDF](https://github.com/parallax/jsPDF)"
+    },
+    {
+        "id": 4,
+        "name": "Inventory Application",
+        "exerpt": "A project for The Odin Project's Node.js course",
+        "path": "/inventory-application",
+        "links": {
+            "repo": "https://github.com/grntco/inventory-application",
+            "demo": "https://lego-inventory-application.adaptable.app/"
+        },
+        "meta": {
+            "year": "2023"
+        },
+        "content": "This is a project for The Odin Project's Node.js course [to build an inventory application](https://www.theodinproject.com/lessons/node-path-nodejs-inventory-application).\nFor languages/libraries/tools, I used JavaScript and Node/Express, EJS for templating, express-validator, and a PostgreSQL database accessed with node-postgres. I also used multer for file uploads and dotenv for accessing environment variables. To organize my project, I used the MVC pattern.\n\n### Features\n* Create, update, and delete Lego items and categories.\n* You can view all items or items by a specific category.\n* If you delete a category, it's items will still exists, although without a category assigned to them.\n* Upload images when creating or updating an item!"
+    }
+]

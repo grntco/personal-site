@@ -1,6 +1,6 @@
 import LinkButton from '../../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
-import projects from './projects.json'
+import projects from '../../../data/projects.json'
 import { useState, useEffect, useContext } from 'react'
 import Button from '../../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
@@ -23,54 +23,65 @@ export default function ProjectsList() {
 
     return (
         <ul className={styles.accordian}>
-            {projects.map((project, index) => {
-                const isActive = activeIndex === index
-                return (
-                    <li className={styles.panel} key={index}>
-                        <div
-                            className={styles.header}
-                            onClick={() => toggleActive(isActive, index)}
-                        >
-                            <h2>{project.name}</h2>
-                            <Button
+            {projects
+                .slice()
+                .reverse()
+                .map((project, index) => {
+                    const isActive = activeIndex === index
+                    return (
+                        <li className={styles.panel} key={index}>
+                            <div
+                                className={styles.header}
                                 onClick={() => toggleActive(isActive, index)}
-                                className={styles.toggleBtn}
-                                type='icon'
-                                isDarkMode={isDarkMode}
                             >
-                                <img
-                                    src={ChevronIcon}
-                                    alt='chevron icon button'
-                                    className={`${styles.icon} ${isActive && styles.active}`}
-                                />
-                            </Button>
-                        </div>
-                        <div
-                            className={`${styles.content} ${isActive && styles.active}`}
-                        >
-                            {project.image && (
-                                <div className={styles.imageWrapper}>
+                                <h2>{project.name}</h2>
+                                <Button
+                                    onClick={() =>
+                                        toggleActive(isActive, index)
+                                    }
+                                    className={styles.toggleBtn}
+                                    type='icon'
+                                    isDarkMode={isDarkMode}
+                                >
                                     <img
-                                        src={project.image}
-                                        alt={project.name}
+                                        src={ChevronIcon}
+                                        alt='chevron icon button'
+                                        className={`${styles.icon} ${isActive && styles.active}`}
                                     />
+                                </Button>
+                            </div>
+                            <div
+                                className={`${styles.content} ${isActive && styles.active}`}
+                            >
+                                {project.image && (
+                                    <div className={styles.imageWrapper}>
+                                        <img
+                                            src={project.image}
+                                            alt={project.name}
+                                        />
+                                    </div>
+                                )}
+                                <div className={styles.btnsContainer}>
+                                    <LinkButton
+                                        url={project.links.demo}
+                                        external
+                                    >
+                                        Demo
+                                    </LinkButton>
+                                    <LinkButton
+                                        url={project.links.repo}
+                                        external
+                                    >
+                                        Repo
+                                    </LinkButton>
                                 </div>
-                            )}
-                            <div className={styles.btnsContainer}>
-                                <LinkButton url={project.links.demo} external>
-                                    Demo
-                                </LinkButton>
-                                <LinkButton url={project.links.repo} external>
-                                    Repo
-                                </LinkButton>
+                                <div className={styles.text}>
+                                    <Markdown>{project.content}</Markdown>
+                                </div>
                             </div>
-                            <div className={styles.text}>
-                                <Markdown>{project.content}</Markdown>
-                            </div>
-                        </div>
-                    </li>
-                )
-            })}
+                        </li>
+                    )
+                })}
         </ul>
     )
 }
