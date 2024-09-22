@@ -6,6 +6,11 @@ import { format } from 'date-fns'
 import { Fragment } from 'react'
 
 function BlogsList() {
+
+
+
+
+    
     const blogsOrdered = blogs.sort((a, b) => {
         const aYear = new Date(a.date).getFullYear()
         const bYear = new Date(b.date).getFullYear()
