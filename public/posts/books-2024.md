@@ -1,9 +1,11 @@
 ---
-title: Books Read in 2024
-date: 09-22-2024
+slug: books-2024
+title: Reading list 2024
+date: 2024-09-22
+tag: books
 ---
 
-# Books Read in 2024
+# Reading List 2024
 
 -   _Atlas Shrugged_, Ayn Rand _(finished)_
 -   _The Grapes of Wrath_, John Steinbeck

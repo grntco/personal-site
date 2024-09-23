@@ -30,6 +30,12 @@ h4 {
     font-weight: 600;
 }
 
+/* h2,
+h3,
+h4 {
+    color: var(--secondary-txt-color);
+} */
+
 h1 {
     font-size: 1.5rem;
 }

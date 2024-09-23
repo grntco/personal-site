@@ -1,6 +1,6 @@
 import Page from '../components/layout/Page/Page'
 import Section from '../components/layout/Page/Section'
-import BlogsList from '../components/layout/BlogsList/BlogsList'
+import PostsList from '../components/layout/PostsList/PostsList'
 
 function Blog() {
     return (
@@ -10,7 +10,7 @@ function Blog() {
                 <p>Hello from Blog! Here are a list of blogs.</p>
             </Section>
             <Section>
-                <BlogsList />
+                <PostsList />
             </Section>
         </Page>
     )
