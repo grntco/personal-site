@@ -84,7 +84,7 @@ function Router() {
             element: <Blog />,
         },
         {
-            path: '/blog/:path',
+            path: '/blog/:slug',
             element: <Post />,
         },
     ])

@@ -1,17 +1,44 @@
 import LinkButton from '../../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
-import projects from '../../../data/projects.json'
 import { useState, useEffect, useContext } from 'react'
 import Button from '../../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
 import Markdown from 'react-markdown'
 import { ThemeContext } from '../../App/App'
+import matter from 'gray-matter'
 
 export default function ProjectsList() {
+    const [projects, setProjects] = useState([])
     const [activeIndex, setActiveIndex] = useState(-1)
     const { isDarkMode } = useContext(ThemeContext)
 
     useEffect(() => {
+        async function fetchProjects() {
+            try {
+                const response = await fetch('/projects/projects.json')
+                const projectSlugs = await response.json()
+
+                const projects = await Promise.all(
+                    projectSlugs.map(async (slug) => {
+                        const projectResponse = await fetch(
+                            `projects/${slug}.md`,
+                        )
+                        const projectText = await projectResponse.text()
+
+                        const { content, data } = matter(projectText)
+
+                        return { content: content, data: data }
+                    }),
+                )
+
+                setProjects(projects)
+            } catch (err) {
+                console.error(`Unable to retrieve projects: ${err}`)
+            }
+        }
+
+        fetchProjects()
+
         setTimeout(() => {
             setActiveIndex(0)
         }, 1000)
@@ -34,7 +61,7 @@ export default function ProjectsList() {
                                 className={styles.header}
                                 onClick={() => toggleActive(isActive, index)}
                             >
-                                <h2>{project.name}</h2>
+                                <h2>{project.data.title}</h2>
                                 <Button
                                     onClick={() =>
                                         toggleActive(isActive, index)
@@ -53,23 +80,23 @@ export default function ProjectsList() {
                             <div
                                 className={`${styles.content} ${isActive && styles.active}`}
                             >
-                                {project.image && (
+                                {project.data.image && (
                                     <div className={styles.imageWrapper}>
                                         <img
-                                            src={project.image}
-                                            alt={project.name}
+                                            src={project.data.image}
+                                            alt={project.data.title}
                                         />
                                     </div>
                                 )}
                                 <div className={styles.btnsContainer}>
                                     <LinkButton
-                                        url={project.links.demo}
+                                        url={project.data.demo}
                                         external
                                     >
                                         Demo
                                     </LinkButton>
                                     <LinkButton
-                                        url={project.links.repo}
+                                        url={project.data.repo}
                                         external
                                     >
                                         Repo

@@ -1,21 +1,24 @@
 import Page from '../components/layout/Page/Page'
 import Section from '../components/layout/Page/Section'
+import Container from '../components/layout/Page/Container'
 import Markdown from 'react-markdown'
 import { useParams } from 'react-router-dom'
-// import blogs from '../data/blogs.json'
 import { useEffect, useState } from 'react'
 import remarkGfm from 'remark-gfm'
 import matter from 'gray-matter'
+import { format } from 'date-fns'
+import LinkButton from '../components/Buttons/LinkButton'
+import styles from '../components/layout/Page/Page.module.css'
 
 function Post() {
-    const { path } = useParams()
+    const { slug } = useParams()
     const [postContent, setPostContent] = useState('')
-    const [postMeta, setPostMeta] = useState({title: '', date: ''})
+    const [postMeta, setPostMeta] = useState({})
 
     useEffect(() => {
         async function fetchPostContent() {
             try {
-                const response = await fetch(`/posts/${path}.md`)
+                const response = await fetch(`/posts/${slug}.md`)
                 const text = await response.text()
 
                 const { content, data } = matter(text)
@@ -27,16 +30,24 @@ function Post() {
             }
         }
         fetchPostContent()
-    }, [path])
+    }, [slug])
+
+    console.log(postMeta.date)
 
     return (
         <Page>
-            <Section>
-                <article>
-                    <p>{postMeta.date}</p>
+            <Container>
+                <div className={styles.postHeader}>
+                    <h1>{postMeta.title}</h1>
+                    <LinkButton to='/blog'>View all posts</LinkButton>
+                    <span>
+                        {postMeta.date && format(postMeta.date, 'LL-dd')}
+                    </span>
+                </div>
+                <article className={styles.postContent}>
                     <Markdown remarkPlugins={remarkGfm}>{postContent}</Markdown>
                 </article>
-            </Section>
+            </Container>
         </Page>
     )
 }

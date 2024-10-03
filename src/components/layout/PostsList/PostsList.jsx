@@ -21,12 +21,7 @@ function PostsList() {
 
                         const { data } = matter(postText)
 
-                        return {
-                            slug: slug,
-                            title: data.title,
-                            date: new Date(data.date),
-                            tag: data.tag,
-                        }
+                        return data
                     }),
                 )
 

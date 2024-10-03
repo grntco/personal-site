@@ -8,6 +8,7 @@
     -moz-osx-font-smoothing: grayscale;
     --font-family: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica',
         'sans-serif';
+    --font-italic: 'Satoshi-VariableItalic';
     /* --font-family: 'Sentient' */
     font-size: 16px;
 }
@@ -20,13 +21,14 @@
 
 body {
     /* font-size: 1rem; */
+    letter-spacing: 0.05rem;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    letter-spacing: 0.05rem;
+    /* letter-spacing: 0.05rem; */
     font-weight: 600;
 }
 
@@ -62,11 +64,16 @@ a:hover {
 }
 
 p {
-    /* font-size: 1.2rem; */
+    /* font-size: 1.1rem; */
+    line-height: 1.5rem;
 }
 
-article em {
-    font-style: italic;
+p + p {
+    /* margin-top: 1.5rem; */
+}
+
+hr {
+    background-color: red;
 }
 
 /* a:visited {
