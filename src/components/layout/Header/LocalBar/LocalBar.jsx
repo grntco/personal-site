@@ -5,6 +5,7 @@ function LocalBar() {
     // for now...
     const localLinks = [
         { name: 'About', url: '/about' },
+        { name: 'Now', url: '/now' },
         { name: 'Projects', url: '/projects' },
         { name: 'Blog', url: '/blog' },
     ]

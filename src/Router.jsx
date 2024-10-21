@@ -6,6 +6,7 @@ import App from './components/App/App.jsx'
 import Blog from './pages/Blog.jsx'
 import Post from './pages/Post.jsx'
 import Page from './components/layout/Page/Page.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 const siteNavigationMap = {
     home: {
@@ -71,11 +72,8 @@ function Router() {
         {
             path: '/',
             element: <Home />,
+            errorElement: <ErrorPage />,
         },
-        // {
-        //     path: 'about',
-        //     element: <About />,
-        // },
         {
             path: 'projects',
             element: <Projects />,
@@ -89,8 +87,20 @@ function Router() {
             element: <Post />,
         },
         {
-            path: '/:pageSlug',
-            element: <Page />,
+            path: '/about',
+            element: <Page contentPath='about' />,
+        },
+        {
+            path: '/now',
+            element: <Page contentPath='now' />,
+        },
+        {
+            path: '/colophon',
+            element: <Page contentPath='colophon' />,
+        },
+        {
+            path: '/tools',
+            element: <Page contentPath='tools' />,
         },
     ])
     return <RouterProvider router={router} />
