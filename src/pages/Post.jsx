@@ -8,17 +8,19 @@ import remarkGfm from 'remark-gfm'
 import matter from 'gray-matter'
 import { format } from 'date-fns'
 import LinkButton from '../components/Buttons/LinkButton'
+import { Link } from 'react-router-dom'
+import ArrowLeftIcon from '../assets/icons/arrow-left.svg'
 import styles from '../components/layout/Page/Page.module.css'
 
 function Post() {
-    const { slug } = useParams()
+    const { postSlug } = useParams()
     const [postContent, setPostContent] = useState('')
     const [postMeta, setPostMeta] = useState({})
 
     useEffect(() => {
         async function fetchPostContent() {
             try {
-                const response = await fetch(`/posts/${slug}.md`)
+                const response = await fetch(`/posts/${postSlug}.md`)
                 const text = await response.text()
 
                 const { content, data } = matter(text)
@@ -30,24 +32,37 @@ function Post() {
             }
         }
         fetchPostContent()
-    }, [slug])
+    }, [postSlug])
 
-    console.log(postMeta.date)
+    // console.log(postContent)
+    // console.log(postMeta.date)
 
     return (
         <Page>
-            <Container>
-                <div className={styles.postHeader}>
-                    <h1>{postMeta.title}</h1>
-                    <LinkButton to='/blog'>View all posts</LinkButton>
-                    <span>
-                        {postMeta.date && format(postMeta.date, 'LL-dd')}
-                    </span>
-                </div>
-                <article className={styles.postContent}>
-                    <Markdown remarkPlugins={remarkGfm}>{postContent}</Markdown>
-                </article>
-            </Container>
+            <div>
+                <Section>
+                    <div className={styles.postHeader}>
+                        <Link to='/blog'>
+                            <img src={ArrowLeftIcon} alt='arrow left' />
+                        </Link>
+                        <h1>{postMeta.title}</h1>
+                        <div className={styles.postMeta}>
+                            <span className={styles.date}>
+                                {postMeta.date &&
+                                    format(postMeta.date, 'LL-dd')}
+                            </span>
+                            <span className={styles.tag}>#{postMeta.tag}</span>
+                        </div>
+                    </div>
+                </Section>
+                <Section>
+                    <article className={styles.postContent}>
+                        <Markdown remarkPlugins={remarkGfm}>
+                            {postContent}
+                        </Markdown>
+                    </article>
+                </Section>
+            </div>
         </Page>
     )
 }

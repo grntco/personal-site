@@ -6,6 +6,8 @@ import ChevronIcon from '../../../assets/icons/chevron-up.svg'
 import Markdown from 'react-markdown'
 import { ThemeContext } from '../../App/App'
 import matter from 'gray-matter'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export default function ProjectsList() {
     const [projects, setProjects] = useState([])
@@ -30,13 +32,11 @@ export default function ProjectsList() {
                         return { content: content, data: data }
                     }),
                 )
-
                 setProjects(projects)
             } catch (err) {
                 console.error(`Unable to retrieve projects: ${err}`)
             }
         }
-
         fetchProjects()
 
         setTimeout(() => {
@@ -50,65 +50,78 @@ export default function ProjectsList() {
 
     return (
         <ul className={styles.accordian}>
-            {projects
-                .slice()
-                .reverse()
-                .map((project, index) => {
-                    const isActive = activeIndex === index
-                    return (
-                        <li className={styles.panel} key={index}>
-                            <div
-                                className={styles.header}
-                                onClick={() => toggleActive(isActive, index)}
-                            >
-                                <h2>{project.data.title}</h2>
-                                <Button
+            {projects.length === 0 ? (
+                <Skeleton
+                    count={4}
+                    baseColor={'var(--secondary-bg-color)'}
+                    highlightColor={'var(--border-color)'}
+                    borderRadius={'4px'}
+                    height={'1.8rem'}
+                    className={styles.skeleton}
+                />
+            ) : (
+                projects
+                    .slice()
+                    .reverse()
+                    .map((project, index) => {
+                        const isActive = activeIndex === index
+                        return (
+                            <li className={styles.panel} key={index}>
+                                <div
+                                    className={styles.header}
                                     onClick={() =>
                                         toggleActive(isActive, index)
                                     }
-                                    className={styles.toggleBtn}
-                                    type='icon'
-                                    isDarkMode={isDarkMode}
                                 >
-                                    <img
-                                        src={ChevronIcon}
-                                        alt='chevron icon button'
-                                        className={`${styles.icon} ${isActive && styles.active}`}
-                                    />
-                                </Button>
-                            </div>
-                            <div
-                                className={`${styles.content} ${isActive && styles.active}`}
-                            >
-                                {project.data.image && (
-                                    <div className={styles.imageWrapper}>
+                                    <h2>{project.data.title}</h2>
+                                    <Button
+                                        onClick={() =>
+                                            toggleActive(isActive, index)
+                                        }
+                                        className={styles.toggleBtn}
+                                        type='icon'
+                                        isDarkMode={isDarkMode}
+                                    >
                                         <img
-                                            src={project.data.image}
-                                            alt={project.data.title}
+                                            src={ChevronIcon}
+                                            alt='chevron icon button'
+                                            className={`${styles.icon} ${isActive && styles.active}`}
                                         />
+                                    </Button>
+                                </div>
+                                <div
+                                    className={`${styles.content} ${isActive && styles.active}`}
+                                >
+                                    {project.data.image && (
+                                        <div className={styles.imageWrapper}>
+                                            <img
+                                                src={project.data.image}
+                                                alt={project.data.title}
+                                            />
+                                        </div>
+                                    )}
+                                    <div className={styles.btnsContainer}>
+                                        <LinkButton
+                                            url={project.data.demo}
+                                            external
+                                        >
+                                            Demo
+                                        </LinkButton>
+                                        <LinkButton
+                                            url={project.data.repo}
+                                            external
+                                        >
+                                            Repo
+                                        </LinkButton>
                                     </div>
-                                )}
-                                <div className={styles.btnsContainer}>
-                                    <LinkButton
-                                        url={project.data.demo}
-                                        external
-                                    >
-                                        Demo
-                                    </LinkButton>
-                                    <LinkButton
-                                        url={project.data.repo}
-                                        external
-                                    >
-                                        Repo
-                                    </LinkButton>
+                                    <div className={styles.text}>
+                                        <Markdown>{project.content}</Markdown>
+                                    </div>
                                 </div>
-                                <div className={styles.text}>
-                                    <Markdown>{project.content}</Markdown>
-                                </div>
-                            </div>
-                        </li>
-                    )
-                })}
+                            </li>
+                        )
+                    })
+            )}
         </ul>
     )
 }

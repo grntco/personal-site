@@ -39,15 +39,15 @@ h4 {
 } */
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 h4 {
@@ -65,11 +65,11 @@ a:hover {
 
 p {
     /* font-size: 1.1rem; */
-    line-height: 1.5rem;
+    line-height: 1.8rem;
 }
 
 p + p {
-    /* margin-top: 1.5rem; */
+    margin-top: 1.5rem;
 }
 
 hr {

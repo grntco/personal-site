@@ -31,9 +31,7 @@
 }
 
 .date {
-    font-weight: 900;
-    font-size: 0.9rem;
-    color: var(--tertiary-txt-color);
+    composes: date from '../Page/Page.module.css';
 }
 
 .title {
@@ -42,12 +40,5 @@
 }
 
 .tag {
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    padding: 2px 4px;
-    border-radius: 4px;
-    background: var(--secondary-bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--secondary-txt-color);
+    composes: tag from '../Page/Page.module.css';
 }

@@ -14,6 +14,7 @@ function App() {
         setIsDarkMode((prevDarkMode) => !prevDarkMode)
     }
 
+
     return (
         <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
             <div

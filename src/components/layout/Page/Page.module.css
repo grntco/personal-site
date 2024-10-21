@@ -1,10 +1,9 @@
-.section,
-article {
-    padding: 4rem 0.5rem;
+.section {
+    padding: 0rem 0.5rem 4rem 0.5rem;
 }
 
 .section:first-child {
-    /* padding-top: 4rem; */
+    padding-top: 4rem;
 }
 
 .section + .section,
@@ -38,11 +37,30 @@ article {
 
 /* POST */
 .postHeader {
+    /* margin-top: 96px; */
+}
+
+.date {
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: var(--tertiary-txt-color);
+}
+
+.tag {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--secondary-txt-color);
 }
 
 .postContent * + * {
     margin-top: 1rem;
 }
+
 /* .postContent {
     display: flex;
     flex-direction: column;

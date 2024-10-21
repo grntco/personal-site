@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
+// import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import App from './components/App/App.jsx'
 import Blog from './pages/Blog.jsx'
 import Post from './pages/Post.jsx'
+import Page from './components/layout/Page/Page.jsx'
 
 const siteNavigationMap = {
     home: {
@@ -71,10 +72,10 @@ function Router() {
             path: '/',
             element: <Home />,
         },
-        {
-            path: 'about',
-            element: <About />,
-        },
+        // {
+        //     path: 'about',
+        //     element: <About />,
+        // },
         {
             path: 'projects',
             element: <Projects />,
@@ -84,8 +85,12 @@ function Router() {
             element: <Blog />,
         },
         {
-            path: '/blog/:slug',
+            path: '/blog/:postSlug',
             element: <Post />,
+        },
+        {
+            path: '/:pageSlug',
+            element: <Page />,
         },
     ])
     return <RouterProvider router={router} />
