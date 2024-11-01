@@ -4,11 +4,16 @@
     /* font-size: px; */
     background-color: var(--primary-bg-color);
     color: var(--primary-txt-color);
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
 }
 
 .lightMode {
     --primary-bg-color: rgb(255, 252, 240);
-    --secondary-bg-color: #f2f0e5;
+    --secondary-bg-color: rgb(242, 240, 229);
+    --primary-bg-color-opaque: rgba(255, 252, 240, 0.8);
+    --secondary-bg-color-opaque: rgba(242, 240, 229, 0.2);
     --border-color: #e6e4d9;
     --border-color-hover: rgb(218, 216, 206);
     --border-color-active: rgb(206, 205, 195);
@@ -19,7 +24,9 @@
 
 .darkMode {
     --primary-bg-color: rgb(16, 15, 15);
-    --secondary-bg-color: #1c1b1a;
+    --secondary-bg-color: rgb(28, 27, 26);
+    --primary-bg-color-opaque: rgba(16, 15, 15, 0.8);
+    --secondary-bg-color-opaque: rgba(28, 27, 26, 0.2);
     --border-color: #282726;
     --border-color-hover: rgb(52, 51, 49);
     --border-color-active: rgb(64, 62, 60);

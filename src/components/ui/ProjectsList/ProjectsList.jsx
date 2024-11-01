@@ -1,10 +1,9 @@
 import LinkButton from '../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
-import { useState, useEffect, useContext } from 'react'
-import Button from '../Buttons/Button'
+import { useState, useEffect } from 'react'
+import { Button } from '../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
 import Markdown from 'react-markdown'
-import { ThemeContext } from '../../../ThemeContext'
 import matter from 'gray-matter'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -12,7 +11,6 @@ import 'react-loading-skeleton/dist/skeleton.css'
 export default function ProjectsList() {
     const [projects, setProjects] = useState([])
     const [activeIndex, setActiveIndex] = useState(-1)
-    const { isDarkMode } = useContext(ThemeContext)
 
     useEffect(() => {
         async function fetchProjects() {
@@ -79,8 +77,6 @@ export default function ProjectsList() {
                                             toggleActive(isActive, index)
                                         }
                                         className={styles.toggleBtn}
-                                        type='icon'
-                                        isDarkMode={isDarkMode}
                                     >
                                         <img
                                             src={ChevronIcon}

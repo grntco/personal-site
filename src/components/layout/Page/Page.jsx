@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import matter from 'gray-matter'
 import Markdown from '../../ui/Markdown/Markdown'
 import styles from './Page.module.css'
+import { SettingsModal } from '../../SettingsModal/SettingsModal'
 
 export default function Page({ title, contentPath, children }) {
     // const { pageSlug } = useParams()
@@ -34,7 +35,7 @@ export default function Page({ title, contentPath, children }) {
     return (
         <>
             <Header />
-            <main>
+            <main className={styles.mainContent}>
                 {contentPath ? (
                     <>
                         <Section className={styles.heroSection}>
@@ -47,6 +48,7 @@ export default function Page({ title, contentPath, children }) {
                 ) : (
                     children
                 )}
+                {/* <SettingsModal /> */}
             </main>
         </>
     )
