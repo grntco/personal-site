@@ -1,0 +1,81 @@
+.markdown {
+    /* border: 1px solid red; */
+}
+
+.markdown * + * {
+    margin-top: 1rem;
+}
+
+/* .markdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} */
+
+.markdown ul,
+ol {
+    margin-left: 48px;
+    /* display: flex;
+    flex-direction: column; */
+    /* gap: 1rem; */
+}
+
+.markdown li::marker {
+    color: var(--tertiary-txt-color);
+    /* font-weight: 900; */
+}
+
+.markdown em {
+    font-family: var(--font-italic);
+}
+
+.markdown * + * {
+    /* margin-top: 1.5rem; */
+}
+
+.markdown pre {
+    background-color: var(--secondary-bg-color);
+    padding: 24px;
+    border-radius: 4px;
+}
+
+.markdown code {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+}
+
+.markdown hr {
+    background-color: var(--border-color);
+    height: 1px;
+    border: none;
+}
+
+.markdown img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.markdown blockquote {
+    margin-left: 3rem;
+    color: var(--secondary-txt-color);
+    border-left: 2px solid var(--border-color);
+    padding-left: 1rem;
+}
+
+.markdown table {
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    margin: 0 auto;
+    min-width: 336px;
+}
+
+.markdown table th,
+table td {
+    text-align: start;
+    border: 1px solid var(--border-color);
+    padding: 4px 8px;
+}

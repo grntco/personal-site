@@ -5,8 +5,8 @@ import Section from './Section'
 // import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import matter from 'gray-matter'
-import Markdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import Markdown from '../../ui/Markdown/Markdown'
+import styles from './Page.module.css'
 
 export default function Page({ title, contentPath, children }) {
     // const { pageSlug } = useParams()
@@ -36,12 +36,14 @@ export default function Page({ title, contentPath, children }) {
             <Header />
             <main>
                 {contentPath ? (
-                    <Section>
-                        <h1>{pageMeta.title}</h1>
-                        <Markdown remarkPlugins={remarkGfm}>
-                            {pageContent}
-                        </Markdown>
-                    </Section>
+                    <>
+                        <Section className={styles.heroSection}>
+                            <h1>{contentPath ? pageMeta.title : title}</h1>
+                        </Section>
+                        <Section>
+                            <Markdown content={pageContent} />
+                        </Section>
+                    </>
                 ) : (
                     children
                 )}

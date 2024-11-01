@@ -13,6 +13,6 @@ Apart from coding, I like other things—lifting weights, reading books, spendin
 
 If you are a recruiter or employer interested in hiring me for a software developer position, I encourage you to have a browse through the [projects I've built](/projects), my [resume](/resume) (you can also download a pdf here), and any of my [blog posts](/blog) about coding, in particular my self-taught developer journey and my experience with The Odin Project.
 
-To contact me, you can send an email to ```{hello at grant collins dot me}``` or say hi on X, although I will likely be less likely to respond to the latter.
+To contact me, you can send an email to `{hello at grant collins dot me}` or say hi on X, although I will likely be less likely to respond to the latter.
 
-Still here? See what I'm up to [now](/now), read [about this website](/colophon), browse some of [the tools I like](/tools), or visit my [blog](/blog).
+Still here? See what I'm up to [now](/now), read [about this website](/colophon), browse some of my [favorite tools](/tools), or visit my [blog](/blog).

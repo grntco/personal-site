@@ -1,6 +1,6 @@
 import Page from '../components/layout/Page/Page'
 import Section from '../components/layout/Page/Section'
-import PostsList from '../components/layout/PostsList/PostsList'
+import PostsList from '../components/ui/PostsList/PostsList'
 
 function Blog() {
     return (

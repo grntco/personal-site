@@ -1,11 +1,11 @@
 import profileImg from '../../../../assets/images/profile.jpeg'
-import ToggleButton from '../../../Buttons/ToggleButton'
+import ToggleButton from '../../../ui/Buttons/ToggleButton'
 import Nav from '../Nav/Nav'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import styles from './GlobalBar.module.css'
 import HamburgerIcon from '../../../../assets/icons/hamburger.svg'
 import SettingsIcon from '../../../../assets/icons/settings.svg'
-import Button from '../../../Buttons/Button'
+import Button from '../../../ui/Buttons/Button'
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 // import ThemeContext from '../../../../ThemeContext'
@@ -39,7 +39,11 @@ function GlobalBar() {
                 toggled={isDarkMode}
                 handleOnClick={() => toggleTheme()}
             />
-            <Button type='icon' isDarkMode={isDarkMode} onHover={() => this.img }>
+            <Button
+                type='icon'
+                isDarkMode={isDarkMode}
+                onHover={() => this.img}
+            >
                 <img src={SettingsIcon} alt='settings' />
             </Button>
         </div>

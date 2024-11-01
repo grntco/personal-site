@@ -3,7 +3,7 @@ slug: now
 title: Now
 ---
 
-Last updated: October 20, 2024
+**Last updated:** October 20, 2024
 
 Living in and working remotely from Greenville, South Carolina
 

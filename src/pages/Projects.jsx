@@ -1,8 +1,8 @@
 import Page from '../components/layout/Page/Page'
 import Section from '../components/layout/Page/Section'
-import styles from '../components/layout/Page/Page.module.css'
-import ProjectsList from '../components/layout/ProjectsList/ProjectsList'
-import { Link } from 'react-router-dom'
+// import styles from '../components/layout/Page/Page.module.css'
+import ProjectsList from '../components/ui/ProjectsList/ProjectsList'
+// import { Link } from 'react-router-dom'
 
 // I'm thinking on layout (or page) stylesheet, with styles for each page components that can be reused without having to import styles from Pages into each page
 

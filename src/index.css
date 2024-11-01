@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: rgba(208, 162, 21, 0.5);
+    /* background-color: rgb(67, 133, 190); */
+}
+
 body {
     /* font-size: 1rem; */
     letter-spacing: 0.05rem;
@@ -57,11 +62,35 @@ h4 {
 
 a {
     text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
     color: var(--secondary-txt-color);
 }
 
 a:hover {
     color: var(--primary-txt-color);
+    text-decoration-style: dashed;
+}
+
+a img {
+    height: 1.3rem;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(277%)
+        hue-rotate(13deg) brightness(95%) contrast(86%);
+}
+
+a:hover > img {
+    filter: brightness(0) saturate(100%) invert(6%) sepia(7%) saturate(226%)
+        hue-rotate(314deg) brightness(102%) contrast(101%);
+}
+
+a.darkMode img {
+    filter: invert(44%) sepia(5%) saturate(325%) hue-rotate(13deg)
+        brightness(95%) contrast(89%);
+}
+
+a.darkMode:hover > img {
+    filter: invert(96%) sepia(6%) saturate(295%) hue-rotate(16deg)
+        brightness(87%) contrast(88%);
 }
 
 p {
@@ -73,9 +102,7 @@ p + p {
     margin-top: 1.5rem;
 }
 
-hr {
-    background-color: red;
-}
+/*  */
 
 /* a:visited {
     color: rgb(139, 126, 200);

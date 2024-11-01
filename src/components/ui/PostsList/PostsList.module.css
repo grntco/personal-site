@@ -31,7 +31,7 @@
 }
 
 .date {
-    composes: date from '../Page/Page.module.css';
+    composes: date from '../../layout/Page/Page.module.css';
 }
 
 .title {
@@ -40,5 +40,5 @@
 }
 
 .tag {
-    composes: tag from '../Page/Page.module.css';
+    composes: tag from '../../layout/Page/Page.module.css';
 }
