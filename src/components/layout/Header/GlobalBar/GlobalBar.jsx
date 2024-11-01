@@ -8,8 +8,7 @@ import SettingsIcon from '../../../../assets/icons/settings.svg'
 import Button from '../../../ui/Buttons/Button'
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
-// import ThemeContext from '../../../../ThemeContext'
-import { ThemeContext } from '../../../App/App'
+import { ThemeContext } from '../../../../ThemeContext'
 
 function GlobalBar() {
     //for now...
