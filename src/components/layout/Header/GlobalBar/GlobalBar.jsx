@@ -8,7 +8,7 @@ import SettingsIcon from '../../../../assets/icons/settings.svg'
 import { Button } from '../../../ui/Buttons/Button'
 import { NavLink } from 'react-router-dom'
 
-function GlobalBar() {
+function GlobalBar({ handleSettingsBtnClick }) {
     const globalLinks = [
         { name: '~', url: '/' },
         { name: 'Projects', url: '/projects' },
@@ -24,9 +24,7 @@ function GlobalBar() {
             </NavLink>
             <Nav links={globalLinks} global={true} />
             <SocialLinks />
-            <Button
-            // onHover={() => this.img}
-            >
+            <Button handleOnClick={handleSettingsBtnClick}>
                 <img src={SettingsIcon} alt='settings' />
             </Button>
         </div>

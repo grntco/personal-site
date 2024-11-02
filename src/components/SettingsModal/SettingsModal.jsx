@@ -3,11 +3,13 @@ import Container from '../layout/Page/Container'
 import { Button } from '../ui/Buttons/Button'
 import xIcon from '../../assets/icons/x.svg'
 import { useContext } from 'react'
-import { ThemeContext } from '../../ThemeContext'
+import { SettingsContext } from '../../SettingsContext'
 import ToggleButton from '../ui/Buttons/ToggleButton'
 
-export const SettingsModal = () => {
-    const { isDarkMode, toggleTheme } = useContext(ThemeContext)
+export const SettingsModal = ({ handleCloseBtnClick }) => {
+    const { isDarkMode, toggleTheme, fontFamily, updateFontFamily } =
+        useContext(SettingsContext)
+    // const { isSerif, toggleSerif }
 
     return (
         <div className={styles.overlay}>
@@ -15,7 +17,7 @@ export const SettingsModal = () => {
                 <div className={styles.modal}>
                     <div className={styles.header}>
                         <h2>Settings</h2>
-                        <Button>
+                        <Button handleOnClick={() => handleCloseBtnClick()}>
                             <img
                                 src={xIcon}
                                 alt='Close modal x button'
@@ -33,6 +35,15 @@ export const SettingsModal = () => {
                         </div>
                         <div className={styles.option}>
                             <span>Font:</span>
+                            <ToggleButton
+                                handleOnClick={() => {
+                                    updateFontFamily(
+                                        fontFamily === 'serif'
+                                            ? 'sans-serif'
+                                            : 'serif',
+                                    )
+                                }}
+                            />
                         </div>
                         <div className={styles.option}>
                             <span>Font size:</span>

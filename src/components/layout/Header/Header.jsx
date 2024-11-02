@@ -3,11 +3,11 @@ import GlobalBar from './GlobalBar/GlobalBar'
 import LocalBar from './LocalBar/LocalBar'
 import Container from '../Page/Container'
 
-function Header() {
+function Header({ handleSettingsBtnClick }) {
     return (
         <header className={styles.header}>
             <Container>
-                <GlobalBar />
+                <GlobalBar handleSettingsBtnClick={() => handleSettingsBtnClick()} />
                 <LocalBar />
             </Container>
         </header>

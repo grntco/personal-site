@@ -13,6 +13,7 @@ export default function Page({ title, contentPath, children }) {
     // const { pageSlug } = useParams()
     const [pageContent, setPageContent] = useState('')
     const [pageMeta, setPageMeta] = useState({})
+    const [modalActive, setModalActive] = useState(false)
 
     useEffect(() => {
         async function fetchPostContent() {
@@ -30,12 +31,23 @@ export default function Page({ title, contentPath, children }) {
         fetchPostContent()
     }, [contentPath])
 
-    // console.log(pageSlug)
+    if (modalActive) {
+        document.body.classList.add('modal-active')
+    } else {
+        document.body.classList.remove('modal-active')
+    }
+
+    const toggleModal = () => {
+        setModalActive(!modalActive)
+    }
 
     return (
         <>
-            <Header />
+            <Header handleSettingsBtnClick={() => toggleModal()} />
             <main className={styles.mainContent}>
+                {modalActive && (
+                    <SettingsModal handleCloseBtnClick={() => toggleModal()} />
+                )}
                 {contentPath ? (
                     <>
                         <Section className={styles.heroSection}>
@@ -48,7 +60,6 @@ export default function Page({ title, contentPath, children }) {
                 ) : (
                     children
                 )}
-                {/* <SettingsModal /> */}
             </main>
         </>
     )

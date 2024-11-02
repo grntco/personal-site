@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import { useContext } from 'react'
-import { ThemeContext } from '../../../ThemeContext'
+import { SettingsContext } from '../../../SettingsContext'
 
-export const Button = ({ children }) => {
-    const { isDarkMode } = useContext(ThemeContext)
+export const Button = ({ children, handleOnClick }) => {
+    const { isDarkMode } = useContext(SettingsContext)
     const classNames = `${styles.button} ${isDarkMode ? styles.darkMode : ''}`
-    return <button className={classNames}>{children}</button>
+    return (
+        <button className={classNames} onClick={handleOnClick}>
+            {children}
+        </button>
+    )
 }
 
 Button.propTypes = {
