@@ -1,7 +1,6 @@
 // import profileImg from '../../../../assets/images/profile.jpeg'
 
 import Nav from '../Nav/Nav'
-import SocialLinks from '../SocialLinks/SocialLinks'
 import styles from './GlobalBar.module.css'
 import HamburgerIcon from '../../../../assets/icons/hamburger.svg'
 import SettingsIcon from '../../../../assets/icons/settings.svg'
@@ -23,7 +22,6 @@ function GlobalBar({ handleSettingsBtnClick }) {
                 <h2 className={styles.siteName}>Grant Collins</h2>
             </NavLink>
             <Nav links={globalLinks} global={true} />
-            <SocialLinks />
             <Button className={styles.settingsButton} onClick={handleSettingsBtnClick}>
                 <img src={SettingsIcon} alt='settings' />
             </Button>

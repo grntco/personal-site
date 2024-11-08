@@ -8,6 +8,7 @@ import matter from 'gray-matter'
 import Markdown from '../../ui/Markdown/Markdown'
 import styles from './Page.module.css'
 import { SettingsModal } from '../../SettingsModal/SettingsModal'
+import Footer from '../Footer/Footer'
 
 export default function Page({ title, contentPath, children }) {
     // const { pageSlug } = useParams()
@@ -61,6 +62,7 @@ export default function Page({ title, contentPath, children }) {
                     children
                 )}
             </main>
+            <Footer />
         </>
     )
 }
