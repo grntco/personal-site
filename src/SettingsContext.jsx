@@ -19,7 +19,7 @@ export const SettingsProvider = ({ children }) => {
         localStorage.getItem('fontFamily') || 'sans-serif',
     )
     const [fontSize, setFontSize] = useState(
-        localStorage.getItem('fontSize') || 'medium',
+        JSON.parse(localStorage.getItem('fontSize')) || 16,
     )
 
     const toggleTheme = () => {

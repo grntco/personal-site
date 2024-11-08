@@ -6,10 +6,10 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    --font-family: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica',
-        'sans-serif';
+    --font-family: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica', sans-serif;
     /* --font-family: 'Sentient'; */
     --font-italic: 'Satoshi-VariableItalic';
+    --font-size: 16px;
     --primary-bg-color: rgb(255, 252, 240);
     --secondary-bg-color: rgb(242, 240, 229);
     --primary-bg-color-opaque: rgba(255, 252, 240, 0.8);
@@ -24,7 +24,7 @@
 }
 
 :root[data-font-family='serif'] {
-    --font-family: 'Sentient';
+    --font-family: 'Sentient', 'Georgia', 'Times New Roman', serif;
 }
 
 :root[data-theme='dark'] {
@@ -38,7 +38,13 @@
     --primary-txt-color: rgb(206, 205, 195);
     --secondary-txt-color: rgb(135, 133, 128);
     --tertiary-txt-color: #575653;
-    /* --red: red; */
+}
+
+:root[data-font-size='14'] {
+    --font-size: 14px;
+}
+:root[data-font-size='18'] {
+    --font-size: 18px;
 }
 
 * {
@@ -49,7 +55,7 @@
 
 html {
     scrollbar-gutter: stable;
-    font-size: 16px;
+    font-size: var(--font-size);
 }
 
 ::selection {

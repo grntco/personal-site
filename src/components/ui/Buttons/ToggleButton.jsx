@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import { useState } from 'react'
 
-function ToggleButton({ toggled, handleOnClick }) {
+function ToggleButton({ toggled, onClick }) {
     const [isToggled, setToggled] = useState(toggled)
 
     return (
@@ -10,7 +10,7 @@ function ToggleButton({ toggled, handleOnClick }) {
             className={`${styles.toggleButton} ${isToggled ? styles.toggled : ''}`}
             onClick={() => {
                 setToggled(!isToggled)
-                handleOnClick()
+                onClick()
             }}
         >
             <div className={styles.thumb} />
@@ -20,7 +20,7 @@ function ToggleButton({ toggled, handleOnClick }) {
 
 ToggleButton.propTypes = {
     toggled: PropTypes.bool,
-    handleOnClick: PropTypes.func,
+    onClick: PropTypes.func,
 }
 
 export default ToggleButton

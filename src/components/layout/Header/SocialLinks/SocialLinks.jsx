@@ -1,5 +1,6 @@
 import ghIcon from '../../../../assets/icons/github-mark.svg'
 import xIcon from '../../../../assets/icons/x-twitter.svg'
+import { Button } from '../../../ui/Buttons/Button'
 import styles from './SocialLinks.module.css'
 
 function SocialLinks() {
@@ -17,18 +18,18 @@ function SocialLinks() {
             {links.map((l, i) => {
                 return (
                     <li key={i}>
-                        <a
+                        <Button
                             href={l.url}
+                            noBorder
                             target='_blank'
-                            rel='noopener'
+                            rel='noopener noreferrer'
                             className={styles.link}
                         >
                             <img
                                 src={l.icon}
                                 alt={l.name}
-                                className={styles.icon}
                             />
-                        </a>
+                        </Button>
                     </li>
                 )
             })}

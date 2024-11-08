@@ -24,7 +24,7 @@ function GlobalBar({ handleSettingsBtnClick }) {
             </NavLink>
             <Nav links={globalLinks} global={true} />
             <SocialLinks />
-            <Button handleOnClick={handleSettingsBtnClick}>
+            <Button className={styles.settingsButton} onClick={handleSettingsBtnClick}>
                 <img src={SettingsIcon} alt='settings' />
             </Button>
         </div>

@@ -3,16 +3,21 @@ import styles from './Button.module.css'
 import { useContext } from 'react'
 import { SettingsContext } from '../../../SettingsContext'
 
-export const Button = ({ children, handleOnClick }) => {
+export const Button = ({ children, href = '', noBorder = false, className = '', ...props }) => {
+    const Tag = href ? 'a' : 'button'
     const { isDarkMode } = useContext(SettingsContext)
-    const classNames = `${styles.button} ${isDarkMode ? styles.darkMode : ''}`
+    const classes = `${styles.button} ${isDarkMode ? styles.darkMode : ''} ${noBorder ? styles.noBorder : ''} ${className.trim()}`
+
     return (
-        <button className={classNames} onClick={handleOnClick}>
+        <Tag href={href} className={classes} {...props}>
             {children}
-        </button>
+        </Tag>
     )
 }
 
 Button.propTypes = {
     children: PropTypes.element,
+    href: PropTypes.string,
+    noBorder: PropTypes.bool,
+    className: PropTypes.string,
 }

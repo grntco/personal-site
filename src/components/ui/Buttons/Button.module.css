@@ -1,17 +1,19 @@
-.buttonBase {
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: var(--font-family);
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background: none;
-    cursor: pointer;
+    background-color: var(--primary-bg-color);
     color: var(--secondary-txt-color);
-}
-
-.button {
-    composes: buttonBase;
     border: 1px solid var(--border-color);
+    cursor: pointer;
+    text-decoration: none; /* for links */
 }
 
 .button:hover {
@@ -20,10 +22,9 @@
     color: var(--primary-txt-color);
 }
 
-.button:has(img) {
-    display: flex;
+/* for buttons with only an icon */
+.button:has(img):not(:has(span)) {
     justify-content: center;
-    align-items: center;
     padding: 4px 5px;
 }
 
@@ -48,32 +49,21 @@
         brightness(87%) contrast(88%);
 }
 
-/* unsure of all this below */
-.linkButton {
-    composes: buttonBase;
-    border: 1px solid var(--border-color);
-    text-decoration: none;
+.button.noBorder {
+    border-color: var(--primary-bg-color);
 }
 
-.linkButton:hover {
-    background-color: var(--secondary-bg-color);
-    border-color: var(--border-color-active);
+.button.noBorder:hover {
+    border-color: var(--secondary-bg-color);
 }
-
-/* .active:hover {
-    background-color: var(--secondary-bg-color);
-    border-color: var(--border-color-active);
-    color: rgb(218, 112, 44);
-} */
 
 /* toggleButton */
 .toggleButton {
-    background-color: var(--primary-bg-color);
-    border: 1px solid var(--border-color);
     border-radius: 25px;
     width: 42px;
     height: 1.4rem;
-    align-self: center; /* Take this out eventually*/
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--border-color);
     position: relative;
 }
 

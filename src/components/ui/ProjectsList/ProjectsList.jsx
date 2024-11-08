@@ -1,4 +1,3 @@
-import LinkButton from '../Buttons/LinkButton'
 import styles from './ProjectsList.module.css'
 import { useState, useEffect } from 'react'
 import { Button } from '../Buttons/Button'
@@ -97,18 +96,20 @@ export default function ProjectsList() {
                                         </div>
                                     )}
                                     <div className={styles.btnsContainer}>
-                                        <LinkButton
-                                            url={project.data.demo}
-                                            external
+                                        <Button
+                                            href={project.data.demo}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
                                         >
                                             Demo
-                                        </LinkButton>
-                                        <LinkButton
-                                            url={project.data.repo}
-                                            external
+                                        </Button>
+                                        <Button
+                                            href={project.data.repo}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
                                         >
                                             Repo
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                     <div className={styles.text}>
                                         <Markdown>{project.content}</Markdown>
