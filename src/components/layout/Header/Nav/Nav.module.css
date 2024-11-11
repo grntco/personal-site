@@ -13,15 +13,17 @@
 
 .link {
     composes: button from '../../../ui/Buttons/Button.module.css';
+    composes: noBorder from '../../../ui/Buttons/Button.module.css';
     border: 1px solid var(--primary-bg-color);
-    text-decoration: none;
+    /* text-decoration: none; */
     position: relative;
 }
 
 .link:hover {
-    background-color: var(--secondary-bg-color);
+    /* background-color: var(--secondary-bg-color);
     border-color: var(--border-color-active);
-    color: var(--primary-txt-color);
+    color: var(--primary-txt-color); */
+    border-color: var(--border-color-active);
 }
 
 .link.active::after {
@@ -29,7 +31,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -8px;
+    bottom: -12px;
     /* background-color: var(--border-color-active); */
     background-color: #da702c;
     border-radius: 2px;

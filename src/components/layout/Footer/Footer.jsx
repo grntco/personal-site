@@ -29,7 +29,6 @@ function Footer({}) {
                                         noBorder
                                         target='_blank'
                                         rel='noopener noreferrer'
-                                        className={styles.link}
                                     >
                                         <img src={link.src} alt={link.alt} />
                                     </Button>
