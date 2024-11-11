@@ -6,9 +6,6 @@
 }
 
 .panel {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 8px; */
     padding: 12px 0px;
 }
 
@@ -16,7 +13,7 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-.header {
+.panelHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +33,7 @@
     border-radius: 4px;
 }
 
-.content {
+.panelContent {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -45,29 +42,10 @@
     transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
-.content.active {
+.panelContent.active {
     height: auto;
     max-height: 9999px;
     transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-/* should probably add these to index.css as generic lists? */
-.text ul,
-.text ol {
-    margin-left: 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.text ul {
-    list-style-type: disc;
 }
 
 .btnsContainer {
@@ -76,14 +54,7 @@
     gap: 8px;
 }
 
-.toggleBtn {
-    /* eventually all button styles should be in Buttons.module.css, then every component composes from there? */
-    /* composes: button from '../../Buttons/Button.module.css'; */
-    /* border: 1px solid red; */
-}
-
 .icon {
-    /* composes: icon from '../../Buttons/Button.module.css'; */
     transition: transform 0.5s ease-out;
 }
 

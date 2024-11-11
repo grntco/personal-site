@@ -84,12 +84,6 @@ h4 {
     font-weight: 600;
 }
 
-/* h2,
-h3,
-h4 {
-    color: var(--secondary-txt-color);
-} */
-
 h1 {
     font-size: 1.6rem;
 }
@@ -138,22 +132,3 @@ a.darkMode:hover > img {
     filter: invert(96%) sepia(6%) saturate(295%) hue-rotate(16deg)
         brightness(87%) contrast(88%);
 }
-
-p {
-    /* font-size: 1.1rem; */
-    line-height: 1.8rem;
-}
-
-p + p {
-    margin-top: 1.5rem;
-}
-
-/*  */
-
-/* a:visited {
-    color: rgb(139, 126, 200);
-} */
-
-/* body {
-    font-size: 20px;
-} */

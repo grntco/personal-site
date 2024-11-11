@@ -2,7 +2,9 @@ import styles from './ProjectsList.module.css'
 import { useState, useEffect } from 'react'
 import { Button } from '../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
-import Markdown from 'react-markdown'
+import Content from '../../layout/Content/Content'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import matter from 'gray-matter'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -65,7 +67,7 @@ export default function ProjectsList() {
                         return (
                             <li className={styles.panel} key={index}>
                                 <div
-                                    className={styles.header}
+                                    className={styles.panelHeader}
                                     onClick={() =>
                                         toggleActive(isActive, index)
                                     }
@@ -85,7 +87,7 @@ export default function ProjectsList() {
                                     </Button>
                                 </div>
                                 <div
-                                    className={`${styles.content} ${isActive && styles.active}`}
+                                    className={`${styles.panelContent} ${isActive && styles.active}`}
                                 >
                                     {project.data.image && (
                                         <div className={styles.imageWrapper}>
@@ -111,9 +113,13 @@ export default function ProjectsList() {
                                             Repo
                                         </Button>
                                     </div>
-                                    <div className={styles.text}>
-                                        <Markdown>{project.content}</Markdown>
-                                    </div>
+                                    <Content>
+                                        <ReactMarkdown
+                                            remarkPlugins={remarkGfm}
+                                        >
+                                            {project.content}
+                                        </ReactMarkdown>
+                                    </Content>
                                 </div>
                             </li>
                         )

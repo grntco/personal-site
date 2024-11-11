@@ -1,18 +1,16 @@
+import { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { format } from 'date-fns'
+import matter from 'gray-matter'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import Page from '../components/layout/Page/Page'
 import Section from '../components/layout/Page/Section'
-// import Container from '../components/layout/Page/Container'
-// import Markdown from 'react-markdown'
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-// import remarkGfm from 'remark-gfm'
-import matter from 'gray-matter'
-import { format } from 'date-fns'
-import { Link } from 'react-router-dom'
+import Content from '../components/layout/Content/Content'
 import ChevronLeftIcon from '../assets/icons/chevron-left.svg'
 import styles from '../components/layout/Page/Page.module.css'
-import Markdown from '../components/ui/Markdown/Markdown'
 
-function Post() {
+const Post = () => {
     const { postSlug } = useParams()
     const [postContent, setPostContent] = useState('')
     const [postMeta, setPostMeta] = useState({})
@@ -34,9 +32,6 @@ function Post() {
         fetchPostContent()
     }, [postSlug])
 
-    // console.log(postContent)
-    // console.log(postMeta.date)
-
     return (
         <Page>
             <div>
@@ -57,9 +52,11 @@ function Post() {
                     </div>
                 </Section>
                 <Section>
-                    <article className={styles.postContent}>
-                        <Markdown content={postContent} />
-                    </article>
+                    <Content>
+                        <ReactMarkdown remarkPlugins={remarkGfm}>
+                            {postContent}
+                        </ReactMarkdown>
+                    </Content>
                 </Section>
             </div>
         </Page>

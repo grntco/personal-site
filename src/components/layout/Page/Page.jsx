@@ -5,7 +5,10 @@ import Section from './Section'
 // import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import matter from 'gray-matter'
-import Markdown from '../../ui/Markdown/Markdown'
+// import Markdown from '../../ui/Markdown/Markdown'
+import Content from '../Content/Content'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import styles from './Page.module.css'
 import { SettingsModal } from '../../SettingsModal/SettingsModal'
 import Footer from '../Footer/Footer'
@@ -52,10 +55,16 @@ export default function Page({ title, contentPath, children }) {
                 {contentPath ? (
                     <>
                         <Section className={styles.heroSection}>
-                            <h1>{contentPath ? pageMeta.title : title}</h1>
+                            <Content>
+                                <h1>{contentPath ? pageMeta.title : title}</h1>
+                            </Content>
                         </Section>
                         <Section>
-                            <Markdown content={pageContent} />
+                            <Content>
+                                <ReactMarkdown remarkPlugins={remarkGfm}>
+                                    {pageContent}
+                                </ReactMarkdown>
+                            </Content>
                         </Section>
                     </>
                 ) : (
