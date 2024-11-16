@@ -6,7 +6,11 @@
     margin-bottom: 1rem;
 }
 
-.content p {
+.content p,
+.content li,
+.content blockquote,
+.content pre,
+.content code {
     line-height: 1.8rem;
 }
 

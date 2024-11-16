@@ -9,7 +9,10 @@ const Blog = () => {
             <Section>
                 <Content>
                     <h1>Blog</h1>
-                    <p>Hello from Blog! Here are a list of blogs.</p>
+                    <p>
+                        I don't write much, but created this page to encourage
+                        myself to write more. Here are the posts I have so far.
+                    </p>
                 </Content>
             </Section>
             <Section>
