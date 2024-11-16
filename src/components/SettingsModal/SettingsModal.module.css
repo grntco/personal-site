@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0px;
+    padding: 12px 8px;
     border-bottom: 1px solid var(--border-color);
     position: relative;
 }
@@ -74,6 +74,38 @@
 
 .sansSerif {
     font-family: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica', sans-serif;
+}
+
+.icon {
+    height: 1.3rem;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(277%)
+        hue-rotate(13deg) brightness(95%) contrast(86%);
+}
+
+.icon.darkMode {
+    filter: invert(44%) sepia(5%) saturate(325%) hue-rotate(13deg)
+        brightness(95%) contrast(89%);
+}
+
+.optionTitle {
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    gap: 8px;
+    font-weight: 500;
+}
+
+.optionTitle:has(.textIcon) {
+    align-items: baseline;
+}
+
+.textIcon {
+    composes: serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    user-select: none;
+    color: var(--secondary-txt-color);
+    /* font-family: serif; */
 }
 
 .dropdownOption:hover {

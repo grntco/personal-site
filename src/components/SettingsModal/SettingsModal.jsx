@@ -9,6 +9,9 @@ import chevronDownIcon from '../../assets/icons/chevron-down.svg'
 import checkIcon from '../../assets/icons/check.svg'
 import minusIcon from '../../assets/icons/minus.svg'
 import plusIcon from '../../assets/icons/plus.svg'
+import moonIcon from '../../assets/icons/moon.svg'
+import typeIcon from '../../assets/icons/type.svg'
+import fontSizeIcon from '../../assets/icons/font-size.svg'
 
 export const SettingsModal = ({ handleCloseBtnClick }) => {
     const {
@@ -37,14 +40,25 @@ export const SettingsModal = ({ handleCloseBtnClick }) => {
                     </div>
                     <div className={styles.content}>
                         <div className={styles.settingsOption}>
-                            <span>Dark mode:</span>
+                            <div className={styles.optionTitle}>
+                                <img
+                                    src={moonIcon}
+                                    alt='moon icon'
+                                    className={`${styles.icon} ${isDarkMode ? styles.darkMode : ''}`}
+                                />
+                                <span>Dark mode:</span>
+                            </div>
                             <ToggleButton
                                 toggled={isDarkMode}
                                 onClick={() => toggleTheme()}
                             />
                         </div>
                         <div className={styles.settingsOption}>
-                            <span>Font:</span>
+                            <div className={styles.optionTitle}>
+                                {/* <img src={typeIcon} alt='type icon' /> */}
+                                <span className={styles.textIcon}>Aa</span>
+                                <span>Font:</span>
+                            </div>
                             <Button
                                 className={styles.dropdownOption}
                                 onClick={() =>
@@ -97,7 +111,11 @@ export const SettingsModal = ({ handleCloseBtnClick }) => {
                             )}
                         </div>
                         <div className={styles.settingsOption}>
-                            <span>Font size:</span>
+                            <div className={styles.optionTitle}>
+                                {/* <img src={fontSizeIcon} alt='font size icon' /> */}
+                                <span className={styles.textIcon}>T</span>
+                                <span>Font size:</span>
+                            </div>
                             <div className={styles.fontSizeAdjuster}>
                                 <Button
                                     onClick={() => {

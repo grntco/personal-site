@@ -13,6 +13,7 @@
 .content ul,
 ol {
     margin-left: 2.5rem;
+    list-style-type: disc;
 }
 
 .content li::marker {
