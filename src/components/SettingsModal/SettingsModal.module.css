@@ -2,7 +2,6 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    /* z-index: 2; */
     display: flex;
     align-items: center;
     background-color: var(--secondary-bg-color-opaque);
@@ -29,11 +28,11 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-.content {
+.optionsContainer {
     padding: 12px;
 }
 
-.settingsOption {
+.option {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,74 +41,42 @@
     position: relative;
 }
 
-.dropdown {
-    background-color: var(--primary-bg-color);
-    position: absolute;
-    top: 4px;
-    right: 0;
-    z-index: 1000;
+.optionTitle {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    -webkit-box-shadow: 4px 2px 10px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 4px 2px 10px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.05);
-    min-width: 164px;
-}
-
-.dropdownOption {
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 1rem;
+    align-items: center;
+    gap: 8px;
     font-weight: 500;
-    border-color: var(--primary-bg-color);
 }
 
-.serif {
-    font-family: 'Sentient', 'Georgia', 'Times New Roman', serif;
-}
-
-.sansSerif {
-    font-family: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica', sans-serif;
-}
-
-.icon {
+.optionIcon {
     height: 1.3rem;
     filter: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(277%)
         hue-rotate(13deg) brightness(95%) contrast(86%);
 }
 
-.icon.darkMode {
+.optionIcon.darkMode {
     filter: invert(44%) sepia(5%) saturate(325%) hue-rotate(13deg)
         brightness(95%) contrast(89%);
 }
 
-.optionTitle {
-    display: flex;
-    align-items: center;
-    /* justify-content: flex-end; */
-    gap: 8px;
+.textIcon {
+    font-family: var(--serif);
+    font-size: 1.3rem;
     font-weight: 500;
+    user-select: none;
+    color: var(--secondary-txt-color);
 }
 
 .optionTitle:has(.textIcon) {
     align-items: baseline;
 }
 
-.textIcon {
-    composes: serif;
-    font-size: 1.3rem;
-    font-weight: 500;
-    user-select: none;
-    color: var(--secondary-txt-color);
-    /* font-family: serif; */
+.serif {
+    font-family: var(--serif);
 }
 
-.dropdownOption:hover {
-    border-color: var(--secondary-bg-color);
+.sansSerif {
+    font-family: var(--sans-serif);
 }
 
 .fontSizeAdjuster {
