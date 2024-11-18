@@ -19,8 +19,7 @@ const Projects = () => {
                         >
                             Full Stack JavaScript Path
                         </a>
-                        . To see more about what I
-                        have built/am building, visit my{' '}
+                        . To see what else I have built/am building, visit my{' '}
                         <a
                             href='https://github.com/grntco'
                             target='_blank'
@@ -28,7 +27,7 @@ const Projects = () => {
                         >
                             GitHub
                         </a>
-                        . 
+                        .
                     </p>
                 </Content>
             </Section>

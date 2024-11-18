@@ -30,6 +30,10 @@ const siteNavigationMap = {
                         name: 'Colophon',
                         path: '/colophon',
                     },
+                    {
+                        name: 'Things',
+                        path: '/things',
+                    },
                 ],
             },
             {
@@ -99,8 +103,8 @@ function Router() {
             element: <Page contentPath='colophon' />,
         },
         {
-            path: '/tools',
-            element: <Page contentPath='tools' />,
+            path: '/things',
+            element: <Page contentPath='things' />,
         },
     ])
     return <RouterProvider router={router} />

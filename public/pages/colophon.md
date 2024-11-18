@@ -1,6 +1,6 @@
 ---
 slug: colophon
-title: About this Website
+title: Colophon
 ---
 
 worky worky
