@@ -19,7 +19,7 @@ function Footer({}) {
         <footer className={styles.footer}>
             <Container>
                 <div className={styles.footerContent}>
-                    <span>Grant Collins {new Date().getFullYear()}</span>
+                    <span>Grant Collins © {new Date().getFullYear()}</span>
                     <ul className={styles.linksList}>
                         {links.map((link, i) => {
                             return (
