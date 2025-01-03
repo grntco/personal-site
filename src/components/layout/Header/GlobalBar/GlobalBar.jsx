@@ -15,13 +15,13 @@ function GlobalBar({ handleSettingsBtnClick }) {
 
     return (
         <div className={styles.globalBar}>
-            <Button>
+            {/* <Button>
                 <img src={HamburgerIcon} alt='menu' />
-            </Button>
+            </Button> */}
             <NavLink to={globalLinks[0].url} className={styles.siteNameLink}>
                 <h2 className={styles.siteName}>Grant Collins</h2>
             </NavLink>
-            <Nav links={globalLinks} global={true} />
+            {/* <Nav links={globalLinks} global={true} /> */}
             <Button className={styles.settingsButton} onClick={handleSettingsBtnClick}>
                 <img src={SettingsIcon} alt='settings' />
             </Button>
