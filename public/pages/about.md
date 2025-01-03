@@ -15,4 +15,4 @@ If you are an employer interested in me for a developer role, I encourage you to
 
 To contact me, you can send an email to `hello at grant collins dot me` or say hi on X, although I am less likely to respond to the latter.
 
-Still here? See what I'm up to [now](/now), read [about this website](/colophon), browse some of my favorite [things](/things), or view my [blog](/blog).
+Still here? See what I'm up to [now](/now), read [about this website](/colophon), browse some of my favorite [things](/things), or visit my [blog](/blog).

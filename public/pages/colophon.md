@@ -3,4 +3,4 @@ slug: colophon
 title: Colophon
 ---
 
-worky worky
+How i built tha sitee
