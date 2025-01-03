@@ -89,3 +89,9 @@ article {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
+
+.heading404 {
+    font-size: 10rem;
+    justify-self: center;
+    color: var(--secondary-txt-color);
+}
