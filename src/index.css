@@ -73,6 +73,7 @@ body {
     /* background-color: red; */
 }
 
+/* why do i have this? */
 body.modal-active {
     overflow-y: hidden;
 }

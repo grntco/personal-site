@@ -45,11 +45,11 @@ export default function Page({ title, contentPath, children }) {
 
     return (
         <>
+            {modalActive && (
+                <SettingsModal handleCloseBtnClick={() => toggleModal()} />
+            )}
             <Header handleSettingsBtnClick={() => toggleModal()} />
             <main className={styles.mainContent}>
-                {modalActive && (
-                    <SettingsModal handleCloseBtnClick={() => toggleModal()} />
-                )}
                 {contentPath ? (
                     <>
                         <Section className={styles.heroSection}>
