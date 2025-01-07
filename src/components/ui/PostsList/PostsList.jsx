@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 const PostItem = ({ post, dateFormat }) => {
     return (
         <li className={styles.listItem}>
-            <Link to={post.slug} className={styles.link}>
+            <Link to={'/blog/' + post.slug} className={styles.link}>
                 <span className={styles.date}>
                     {format(post.date, dateFormat)}
                 </span>
@@ -81,7 +81,7 @@ const PostsList = ({ limit }) => {
                         <PostItem
                             key={index}
                             post={post}
-                            dateFormat={'LL-dd-yy'}
+                            dateFormat={'LL.dd.yy'}
                         />
                     )
                 })}
@@ -101,7 +101,7 @@ const PostsList = ({ limit }) => {
                                     <PostItem
                                         key={index}
                                         post={post}
-                                        dateFormat={'LL-dd'}
+                                        dateFormat={'LL.dd'}
                                     />
                                 )
                             })}
