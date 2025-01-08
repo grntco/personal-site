@@ -15,8 +15,11 @@
 }
 
 .content ul,
-ol {
+.content ol {
     margin-left: 2.5rem;
+}
+
+.content ul {
     list-style-type: disc;
 }
 
@@ -74,4 +77,8 @@ table td {
     text-align: start;
     border: 1px solid var(--border-color);
     padding: 4px 8px;
+}
+
+.content sup a {
+    text-decoration: none;
 }

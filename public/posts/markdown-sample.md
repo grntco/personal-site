@@ -94,7 +94,7 @@ that last line which continues item 3 above).
 
 Here's a link to [a website](http://foo.bar), to a [local
 doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
+doc](#an-h2-header). Here's a footnote.[^1]
 
 [^1]: Footnote text goes here.
 

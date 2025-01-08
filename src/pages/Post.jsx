@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import matter from 'gray-matter'
@@ -9,11 +9,14 @@ import Section from '../components/layout/Page/Section'
 import Content from '../components/layout/Content/Content'
 import ChevronLeftIcon from '../assets/icons/chevron-left.svg'
 import styles from '../components/layout/Page/Page.module.css'
+import { Button } from '../components/ui/Buttons/Button'
+import { SettingsContext } from '../SettingsContext'
 
 const Post = () => {
     const { postSlug } = useParams()
     const [postContent, setPostContent] = useState('')
     const [postMeta, setPostMeta] = useState({})
+    const { isDarkMode } = useContext(SettingsContext)
 
     useEffect(() => {
         async function fetchPostContent() {
@@ -37,17 +40,17 @@ const Post = () => {
             <div>
                 <Section>
                     <div className={styles.postHeader}>
-                        <Link to='/blog' className={styles.backButton}>
+                        <Link to='/blog' className={styles.allPostsLink}>
                             <img src={ChevronLeftIcon} alt='arrow left' />
-                            <span>Back</span>
+                            All Posts
                         </Link>
                         <h1 className={styles.postTitle}>{postMeta.title}</h1>
                         <div className={styles.postMeta}>
-                            <span className={styles.tag}>#{postMeta.tag}</span>
-                            <span className={styles.date}>
+                            <div className={styles.date}>
                                 {postMeta.date &&
-                                    format(postMeta.date, 'MMMM d, y')}
-                            </span>
+                                    format(postMeta.date, 'LL.dd.yy')}
+                            </div>
+                            <div className={styles.tag}>#{postMeta.tag}</div>{' '}
                         </div>
                     </div>
                 </Section>

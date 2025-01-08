@@ -1,7 +1,7 @@
 ---
 slug: books-2024
 title: Reading list 2024
-date: 2024-09-22
+date: 2024-12-31
 tag: books
 ---
 
@@ -26,9 +26,4 @@ tag: books
 -   _The Fellowship of the Ring_, J.R.R. Tolkien
 -   _The Two Towers_, J.R.R. Tolkien
 -   _The Return of the King_, J.R.R. Tolkien
--   _The Courage to Be Disliked_, ...
-
-This is a paragraph with a [link](https://www.youtube.com/watch?v=jfKfPfyJRdk).
-
-1. This is a numbered list
-2.
+-   _The Courage to Be Disliked_, Fumitake Koga and Ichiro Kishimi

@@ -6,6 +6,7 @@ import { SettingsContext } from '../../../SettingsContext'
 export const Button = ({ children, href = '', noBorder = false, className = '', ...props }) => {
     const Tag = href ? 'a' : 'button'
     const { isDarkMode } = useContext(SettingsContext)
+    // className thing not working
     const classes = `${styles.button} ${isDarkMode ? styles.darkMode : ''} ${noBorder ? styles.noBorder : ''} ${className.trim()}`
 
     return (

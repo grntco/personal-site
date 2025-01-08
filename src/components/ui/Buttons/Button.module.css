@@ -61,3 +61,7 @@
 .noBorder:hover {
     border-color: var(--secondary-bg-color);
 }
+
+.allPostsBtn {
+    gap: 0px;
+}

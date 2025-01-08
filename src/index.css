@@ -62,7 +62,7 @@ html {
 
 ::selection {
     background-color: rgba(208, 162, 21, 0.5);
-    /* background-color: rgb(67, 133, 190); */
+    color: var(--primary-txt-color);
 }
 
 body {
@@ -132,6 +132,17 @@ a.darkMode img {
 }
 
 a.darkMode:hover > img {
+    filter: invert(96%) sepia(6%) saturate(295%) hue-rotate(16deg)
+        brightness(87%) contrast(88%);
+}
+
+/* probably not what I want lol */
+:root[data-theme='dark'] a img {
+    filter: invert(44%) sepia(5%) saturate(325%) hue-rotate(13deg)
+        brightness(95%) contrast(89%);
+}
+
+:root[data-theme='dark'] a:hover img {
     filter: invert(96%) sepia(6%) saturate(295%) hue-rotate(16deg)
         brightness(87%) contrast(88%);
 }

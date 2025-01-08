@@ -1,5 +1,5 @@
 import styles from './ProjectsList.module.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from '../Buttons/Button'
 import ChevronIcon from '../../../assets/icons/chevron-up.svg'
 import Content from '../../layout/Content/Content'
@@ -36,6 +36,7 @@ export default function ProjectsList() {
                 console.error(`Unable to retrieve projects: ${err}`)
             }
         }
+
         fetchProjects()
 
         setTimeout(() => {
