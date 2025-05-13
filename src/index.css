@@ -1,5 +1,5 @@
-@import url('satoshi.css');
-@import url('sentient.css');
+@import url('./assets/fonts/satoshi.css');
+@import url('./assets/fonts/sentient.css');
 
 :root {
     font-synthesis: none;
@@ -9,7 +9,6 @@
     --serif: 'Sentient', 'Georgia', 'Times New Roman', serif;
     --sans-serif: 'Satoshi-Variable', 'Inter', 'Arial', 'Helvetica', sans-serif;
     --font-family: var(--sans-serif);
-    /* --font-family: 'Sentient'; */
     --font-italic: 'Satoshi-VariableItalic';
     --font-size: 16px;
     --primary-bg-color: rgb(255, 252, 240);
@@ -22,7 +21,6 @@
     --primary-txt-color: rgb(16, 15, 15);
     --secondary-txt-color: #6f6e69;
     --tertiary-txt-color: #b7b5ac;
-    /* --red: blue; */
 }
 
 :root[data-font-family='serif'] {
@@ -66,14 +64,11 @@ html {
 }
 
 body {
-    /* font-size: 1rem; */
     letter-spacing: 0.05rem;
-    /* scrollbar-gutter: stable; */
     background-color: var(--primary-bg-color);
-    /* background-color: red; */
 }
 
-/* why do i have this? */
+/* TODO: Is this necessary? */
 body.modal-active {
     overflow-y: hidden;
 }
@@ -82,8 +77,6 @@ h1,
 h2,
 h3,
 h4 {
-    /* letter-spacing: 0.05rem; */
-    /* color: var(--secondary-txt-color); */
     font-weight: 600;
 }
 
@@ -136,7 +129,6 @@ a.darkMode:hover > img {
         brightness(87%) contrast(88%);
 }
 
-/* probably not what I want lol */
 :root[data-theme='dark'] a img {
     filter: invert(44%) sepia(5%) saturate(325%) hue-rotate(13deg)
         brightness(95%) contrast(89%);
