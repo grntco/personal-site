@@ -9,7 +9,7 @@ const Blog = () => {
             <Section>
                 <Content>
                     <h1>Blog</h1>
-                    <p>Not much happening in these parts...</p>
+                    <p>Not much happening here...</p>
                 </Content>
             </Section>
             <Section>

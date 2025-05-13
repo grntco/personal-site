@@ -6,7 +6,7 @@ repo: https://github.com/grntco/inventory-application
 demo: https://lego-inventory-application.adaptable.app/
 ---
 
-This is a project for The Odin Project's Node.js course [to build an inventory application](https://www.theodinproject.com/lessons/node-path-nodejs-inventory-application).
+This is a project for The Odin Project's Node.js course to build an [inventory application](https://www.theodinproject.com/lessons/node-path-nodejs-inventory-application).
 
 I used JavaScript and Node/Express, EJS for templating, express-validator, and a PostgreSQL database accessed with node-postgres. I also used multer for file uploads and dotenv for accessing environment variables. To organize my project, I used the MVC pattern.
 

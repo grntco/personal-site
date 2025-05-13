@@ -3,15 +3,14 @@ slug: now
 title: Now
 ---
 
-**Last updated:** January 3, 2024
+**Last updated:** May 13, 2025
 
 ## Personal
 
--   Reading _The Once and Future King_ and _The World According to Physics_.
--   Training for a half-marathon.
--   Playing _Star Wars: Jedi Fallen Order_ on Xbox.
--   Learning backend development through The Odin Project's Node.js module. Over halfway through this course and nearly at the end of the entire Full-Stack JavaScript Path. It's been a journey!
--   Also learning React, in part by building this website.
+-   Reading _Vagabond_ and _The Big Picture_.
+-   Playing _Cyberpunk 2077_ and _Halo: Infinite_ on Xbox.
+-   Learning Next.js.
+-   Missing a recent trip to South Korea.
 
 ## Work
 

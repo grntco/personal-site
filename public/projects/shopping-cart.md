@@ -7,7 +7,7 @@ repo: https://github.com/grntco/shopping-cart
 demo: https://shopping-cart-nine-jade.vercel.app/
 ---
 
-This is a project to build [a fake e-commerce website](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) for The Odin Project's React course.
+This is a project to build a fake [e-commerce website](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) for The Odin Project's React course.
 
 I learned to create API calls in React with useEffect, check prop types with PropTypes, implement routing with React Router, use loading states, and test my components with Vitest and React Testing Library. I also worked with the styled-components library for the first time.
 

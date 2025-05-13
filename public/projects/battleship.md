@@ -6,7 +6,7 @@ repo: https://github.com/grntco/battleship
 demo: https://grntco.github.io/battleship/
 ---
 
-This is a project for The Odin Project's JavaScript course to create [a battleship game](https://www.theodinproject.com/lessons/node-path-javascript-battleship) to practice unit testing. I used JavaScript, HTML, CSS, and Jest.
+This is a project for The Odin Project's JavaScript course to create a [battleship game](https://www.theodinproject.com/lessons/node-path-javascript-battleship) to practice unit testing. I used JavaScript, HTML, CSS, and Jest.
 
 This is the first major project on which I implemented unit testing. I learned which methods to test, how to use mocking, and how to organize my tests with test suites.
 

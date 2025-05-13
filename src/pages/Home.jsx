@@ -9,17 +9,16 @@ const Home = () => {
         <Page>
             <Section>
                 <Content>
-                    {/* <h1>Hi</h1> */}
                     <p>
-                        This website, grantcollins.me, is the internet home of
-                        Grant Collins—me. Thanks for visiting!
+                        Hi! This website is primarily a portfolio to list
+                        projects as a web developer. But sometimes I also
+                        publish blog posts and update what I am doing now.
                     </p>
                 </Content>
             </Section>
             <Section>
                 <Content>
                     <h2>On this site</h2>
-                    {/* <p>Here are some links to get you started exploring:</p> */}
                     <ul>
                         <li>
                             <Link to='/about'>About</Link>
@@ -32,12 +31,6 @@ const Home = () => {
                         </li>
                         <li>
                             <Link to='/now'>Now</Link>
-                        </li>
-                        <li>
-                            <Link to='/things'>Things</Link>
-                        </li>
-                        <li>
-                            <Link to='/colophon'>Colophon</Link>
                         </li>
                     </ul>
                 </Content>

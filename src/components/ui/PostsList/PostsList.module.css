@@ -34,6 +34,10 @@
     composes: date from '../../layout/Page/Page.module.css';
 }
 
+.date::after {
+    content: none;
+}
+
 .title {
     flex-grow: 1;
     font-size: 1rem;

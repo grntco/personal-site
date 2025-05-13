@@ -4,6 +4,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--secondary-bg-color-opaque);
     backdrop-filter: blur(3px);
     z-index: 999;
@@ -23,7 +24,8 @@
 
 .modal {
     transform: translateY(-96px);
-    min-width: 32rem;
+    width: 100%;
+    max-width: 32rem;
     min-height: 296px;
     border: 1px solid blue;
     background-color: var(--primary-bg-color);

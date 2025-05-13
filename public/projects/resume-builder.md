@@ -7,7 +7,7 @@ repo: https://github.com/grntco/resume-builder
 demo: https://resume-builder-lac.vercel.app/
 ---
 
-This is a project for The Odin Project's React course to build [a resume/CV creator](https://www.theodinproject.com/lessons/node-path-react-new-cv-application) using React.
+This is a project for The Odin Project's React course to build a [resume/CV creator](https://www.theodinproject.com/lessons/node-path-react-new-cv-application) using React.
 
 This is the first website I built with React. I learned to work with reusable components, lists, and state. I also used Vite, CSS modules, Vercel for hosting, and jsPDF, a library for converting HTML to PDF documents.
 

@@ -1,18 +1,15 @@
 import Container from '../Page/Container'
 import { Button } from '../../ui/Buttons/Button'
-import { Link } from 'react-router-dom'
 import ghIcon from '../../../assets/icons/github-mark.svg'
-import xIcon from '../../../assets/icons/x-twitter.svg'
 import styles from './Footer.module.css'
 
-function Footer({}) {
+function Footer() {
     const links = [
         {
             src: ghIcon,
             href: 'https://github.com/grntco',
             alt: 'GitHub octocan logo',
         },
-        { src: xIcon, href: '#', alt: 'Twitter (x) logo' },
     ]
 
     return (

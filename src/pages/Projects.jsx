@@ -10,8 +10,8 @@ const Projects = () => {
                 <Content>
                     <h1>Projects</h1>
                     <p>
-                        Listed are the major projects I created to learn to
-                        code, often for The Odin Project's{' '}
+                        Listed are several projects created to learn to code,
+                        mostly for The Odin Project's{' '}
                         <a
                             href='https://www.theodinproject.com/paths/full-stack-javascript'
                             target='_blank'

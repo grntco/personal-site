@@ -6,7 +6,7 @@ repo: https://github.com/grntco/weather
 demo: https://grntco.github.io/weather/
 ---
 
-This is [a weather app](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) for The Odin Project's JavaScript course. I learned to work with APIs, using the free tier of the [Weather API](https://www.weatherapi.com/), and practice Promises with async/await. I also used Webpack.
+This is a [weather app](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) for The Odin Project's JavaScript course. I learned to work with APIs, using the free tier of the [Weather API](https://www.weatherapi.com/), and practice Promises with async/await. I also used Webpack.
 
 ### Features
 

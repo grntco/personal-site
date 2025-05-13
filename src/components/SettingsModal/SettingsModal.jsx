@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import { SettingsContext } from '../../SettingsContext'
-import Container from '../layout/Page/Container'
 import { Button } from '../ui/Buttons/Button'
 import ToggleButton from '../ui/Buttons/ToggleButton/ToggleButton'
 import Dropdown from '../ui/Dropdown/Dropdown'
@@ -42,7 +41,6 @@ const SettingsModal = ({ handleCloseBtnClick }) => {
 
     return (
         <div className={styles.overlay}>
-            <Container>
                 <div className={styles.modal}>
                     <div className={styles.header}>
                         <h2>Settings</h2>
@@ -107,7 +105,6 @@ const SettingsModal = ({ handleCloseBtnClick }) => {
                         </div>
                     </div>
                 </div>
-            </Container>
         </div>
     )
 }
