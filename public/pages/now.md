@@ -3,14 +3,15 @@ slug: now
 title: Now
 ---
 
-**Last updated:** May 13, 2025
+**Last updated:** July 22, 2025
 
 ## Personal
 
--   Reading _Vagabond_ and _The Big Picture_.
--   Playing _Cyberpunk 2077_ and _Halo: Infinite_ on Xbox.
--   Learning Next.js.
--   Missing a recent trip to South Korea.
+-   Reading _Thinking, Fast and Slow_.
+-   Listening to _Wool_ (_Silo_ series).
+-   Playing _Cyberpunk 2077_ and _Halo: Infinite_.
+-   Watching _The Bear_ and _Jujutsu Kaisen_.
+-   Learning Node.js. 
 
 ## Work
 
