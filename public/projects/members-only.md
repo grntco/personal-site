@@ -11,8 +11,6 @@ This is a project created for The Odin Project's Node.js course to build an appl
 
 I learned to handle authentication requests using the Passport.js local strategy, including protecting certain routes and actions if a user does not have certain privileges. User passwords are hashed and validated using bcryptjs. I also continued practicing with Node/Express, Express Validator, EJS, and PostgreSQL.
 
-**Live Demo:** [coming soon]
-
 ## Features:
 
 - Create an account for Members Only and log into your account.
