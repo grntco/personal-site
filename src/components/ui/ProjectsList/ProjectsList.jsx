@@ -99,20 +99,24 @@ export default function ProjectsList() {
                                         </div>
                                     )}
                                     <div className={styles.btnsContainer}>
-                                        <Button
-                                            href={project.data.demo}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                        >
-                                            Demo
-                                        </Button>
-                                        <Button
-                                            href={project.data.repo}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                        >
-                                            Repo
-                                        </Button>
+                                        {project.data.demo && (
+                                            <Button
+                                                href={project.data.demo}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
+                                                Demo
+                                            </Button>
+                                        )}
+                                        {project.data.repo && (
+                                            <Button
+                                                href={project.data.repo}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
+                                                Repo
+                                            </Button>
+                                        )}
                                     </div>
                                     <Content>
                                         <ReactMarkdown
