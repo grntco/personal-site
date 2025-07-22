@@ -3,7 +3,6 @@ slug: inventory-application
 title: Inventory Application
 date: 2024-09-07
 repo: https://github.com/grntco/inventory-application
-demo: https://lego-inventory-application.adaptable.app/
 ---
 
 This is a project for The Odin Project's Node.js course to build an [inventory application](https://www.theodinproject.com/lessons/node-path-nodejs-inventory-application).
