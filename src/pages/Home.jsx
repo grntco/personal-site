@@ -36,8 +36,12 @@ const Home = () => {
                 </Content>
             </Section>
             <Section>
-                <h2>Recent posts</h2>
-                <PostsList limit={3} />
+                <h2>Most recently written</h2>
+                <PostsList limit={3} isBlog={true} />
+            </Section>
+            <Section>
+                <h2>Most recently read</h2>
+                <PostsList limit={3} isBlog={false} />
             </Section>
         </Page>
     )

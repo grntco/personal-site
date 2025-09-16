@@ -7,6 +7,7 @@ function LocalBar() {
         { name: 'About', url: '/about' },
         { name: 'Projects', url: '/projects' },
         { name: 'Blog', url: '/blog' },
+        { name: 'Library', url: '/library' },
         { name: 'Now', url: '/now' },
     ]
 

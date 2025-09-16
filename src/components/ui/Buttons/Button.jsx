@@ -3,7 +3,13 @@ import styles from './Button.module.css'
 import { useContext } from 'react'
 import { SettingsContext } from '../../../SettingsContext'
 
-export const Button = ({ children, href = '', noBorder = false, className = '', ...props }) => {
+export const Button = ({
+    children,
+    href = '',
+    noBorder = false,
+    className = '',
+    ...props
+}) => {
     const Tag = href ? 'a' : 'button'
     const { isDarkMode } = useContext(SettingsContext)
     // className thing not working
@@ -17,7 +23,7 @@ export const Button = ({ children, href = '', noBorder = false, className = '', 
 }
 
 Button.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.node,
     href: PropTypes.string,
     noBorder: PropTypes.bool,
     className: PropTypes.string,

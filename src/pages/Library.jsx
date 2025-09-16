@@ -3,19 +3,20 @@ import Section from '../components/layout/Page/Section'
 import Content from '../components/layout/Content/Content'
 import PostsList from '../components/ui/PostsList/PostsList'
 
-const Blog = () => {
+const Library = () => {
     return (
         <Page>
             <Section>
                 <Content>
-                    <h1>Blog</h1>
+                    <h1>Library</h1>
+                    <p>Notes on books I've read.</p>
                 </Content>
             </Section>
             <Section>
-                <PostsList isBlog={true} />
+                <PostsList />
             </Section>
         </Page>
     )
 }
 
-export default Blog
+export default Library

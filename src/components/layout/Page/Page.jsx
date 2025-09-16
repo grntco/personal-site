@@ -75,5 +75,5 @@ export default function Page({ title, contentPath, children }) {
 }
 
 Page.propTypes = {
-    // children: PropTypes.element,
+    children: PropTypes.node,
 }

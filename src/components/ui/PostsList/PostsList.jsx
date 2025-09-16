@@ -1,37 +1,44 @@
 import styles from './PostsList.module.css'
 import { Link } from 'react-router-dom'
-import { format } from 'date-fns'
-import { Fragment } from 'react'
+import formatPostDate from '../../../utils/formatPostDate.js'
 import { useState, useEffect } from 'react'
 import matter from 'gray-matter'
 import PropTypes from 'prop-types'
 
-const PostItem = ({ post, dateFormat }) => {
+const PostItem = ({ post, isBlog }) => {
     return (
         <li className={styles.listItem}>
-            <Link to={'/blog/' + post.slug} className={styles.link}>
-                <span className={styles.date}>
-                    {format(post.date, dateFormat)}
-                </span>
+            <Link
+                to={isBlog ? '/blog/' + post.slug : '/library/' + post.slug}
+                className={styles.link}
+            >
+                <span className={styles.date}>{formatPostDate(post.date)}</span>
                 <h3 className={styles.title}>{post.title}</h3>
-                <span className={styles.tag}>#{post.tag}</span>
+                {post.tag && <span className={styles.tag}>#{post.tag}</span>}
             </Link>
         </li>
     )
 }
 
-const PostsList = ({ limit }) => {
+const PostsList = ({ limit, isBlog }) => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
         async function fetchPosts() {
             try {
-                const response = await fetch('/posts/posts.json')
+                const fetchDir = isBlog ? '/posts/' : '/books/'
+                const fetchUrl = isBlog
+                    ? `${fetchDir}posts.json`
+                    : `${fetchDir}books.json`
+
+                const response = await fetch(fetchUrl)
                 const postSlugs = await response.json()
 
                 const postsData = await Promise.all(
                     postSlugs.map(async (slug) => {
-                        const postResponse = await fetch(`posts/${slug}.md`)
+                        const fetchSlugUrl = fetchDir + slug + '.md'
+
+                        const postResponse = await fetch(fetchSlugUrl)
                         const postText = await postResponse.text()
 
                         const { data } = matter(postText)
@@ -40,86 +47,37 @@ const PostsList = ({ limit }) => {
                     }),
                 )
 
-                const groupedPosts = postsData.reduce((acc, post) => {
-                    const year = post.date.getFullYear()
+                const sorted = postsData.sort((a, b) => {
+                    return new Date(b.date) - new Date(a.date)
+                })
 
-                    if (!acc[year]) {
-                        acc[year] = []
-                    }
-
-                    acc[year].push(post)
-                    return acc
-                }, {})
-
-                const sortedPosts = Object.entries(groupedPosts)
-                    .sort(([yearA], [yearB]) => yearB - yearA)
-                    .map(([year, posts]) => [
-                        year,
-                        posts.sort((a, b) => b.date - a.date),
-                    ])
-
-                setPosts(
-                    limit
-                        ? sortedPosts
-                              .flatMap(([, postsInYear]) => postsInYear)
-                              .slice(0, limit)
-                        : sortedPosts,
-                )
+                setPosts(limit ? sorted.slice(0, limit) : sorted)
             } catch (err) {
                 console.error('Unable to retrieve posts', err)
             }
         }
 
         fetchPosts()
-    }, [])
+    }, [isBlog, limit])
 
-    if (limit) {
-        return (
-            <ul className={styles.list}>
-                {posts.map((post, index) => {
-                    return (
-                        <PostItem
-                            key={index}
-                            post={post}
-                            dateFormat={'LL.dd.yy'}
-                        />
-                    )
-                })}
-            </ul>
-        )
-    } else {
-        return (
-            <ul className={styles.list}>
-                {posts.map(([year, postsByYear]) => {
-                    return (
-                        <Fragment key={year}>
-                            <li className={styles.yearTitle}>
-                                <h2>{year}</h2>
-                            </li>
-                            {postsByYear.map((post, index) => {
-                                return (
-                                    <PostItem
-                                        key={index}
-                                        post={post}
-                                        dateFormat={'LL.dd'}
-                                    />
-                                )
-                            })}
-                        </Fragment>
-                    )
-                })}
-            </ul>
-        )
-    }
+    return (
+        <ul className={styles.list}>
+            {posts.map((post, index) => {
+                return <PostItem key={index} post={post} isBlog={isBlog} />
+            })}
+        </ul>
+    )
 }
 
 PostItem.propTypes = {
     post: PropTypes.object,
     dateFormat: PropTypes.string,
+    isBlog: PropTypes.bool,
 }
 
 PostsList.propTypes = {
     limit: PropTypes.number,
+    isBlog: PropTypes.bool,
 }
 
 export default PostsList

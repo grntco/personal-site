@@ -96,7 +96,6 @@ article {
     font-weight: 900;
     font-size: 0.9rem;
     color: var(--tertiary-txt-color);
-    position: relative;
 }
 
 .tag {
@@ -108,14 +107,14 @@ article {
     background: var(--secondary-bg-color);
     border: 1px solid var(--border-color);
     color: var(--secondary-txt-color);
-    /* position: relative; */
+    position: relative;
 }
 
-.date::after {
+.tag::before {
     content: '•';
     position: absolute;
     font-weight: 400;
-    right: -16px;
+    left: -16px;
 }
 
 .postContent {
