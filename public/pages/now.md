@@ -3,13 +3,14 @@ slug: now
 title: Now
 ---
 
-**Last updated:** September 15, 2025
+**Last updated:** September 29, 2025
 
 ## Personal
 
 -   Reading _Skunk Works: A Personal Memoir of My Years at Lockheed_.
 -   Playing _Hogwarts Legacy_.
--   Building this [Blog API](https://www.theodinproject.com/lessons/node-path-nodejs-blog-api) project with Node.js.
+-   Watching _Moving_.
+-   Recently finished this [Blog API](https://www.theodinproject.com/lessons/node-path-nodejs-blog-api) project with Node.js.
 
 ## Work
 
