@@ -5,7 +5,7 @@ title: About
 
 Hi! I'm Grant Collins, a self-taught developer working remotely from Greenville, South Carolina.
 
-After graduating college in 2021, I learned to code using online resources (primarily [The Odin Project](https://www.theodinproject.com/)).
+After graduating college in 2020, I learned to code using online resources (primarily [The Odin Project](https://www.theodinproject.com/)).
 
 Currently, I'm working as a web developer at Classical Conversations, a homeschool curriculum provider and support organization. Here, I use mostly PHP, JavaScript, and WordPress. Outside of work, I am following the [Node.js course](https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs) in the [Full-Stack JavaScript Path](https://www.theodinproject.com/paths/full-stack-javascript) from The Odin Project.
 
