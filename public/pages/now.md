@@ -3,18 +3,16 @@ slug: now
 title: Now
 ---
 
-**Last updated:** October 23, 2025
+**Last updated:** January 29, 2026
 
 ## Personal
 
--   Reading _Skunk Works: A Personal Memoir of My Years at Lockheed_ and Epictetus's _Discourses and Selected Writings_.
--   Playing _Hogwarts Legacy_.
--   Recently finished this [Blog API](https://www.theodinproject.com/lessons/node-path-nodejs-blog-api) project with Node.js.
+-   Reading _The Will of the Many_ and Aristotle's _Ethics_.
+-   Training for a half-marathon.
 
 ## Work
 
--   Working remotely in Greenville, SC as a web developer at Classical Conversations.
--   Creating and maintaining 15+ websites using PHP, JavaScript, WordPress, SQL, and Git.
+-   Developing software at Pacific Consulting Group.
 
 ---
 
